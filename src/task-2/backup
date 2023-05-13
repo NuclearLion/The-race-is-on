@@ -1,0 +1,536 @@
+	mov ecx, eax
+	dec ecx
+
+	cmp ecx, 0
+	jle done
+
+outer_loop:
+	xor ebx, ebx
+
+inner_loop:
+	mov esi, edx
+	mov edi, edx
+
+	add esi, ebx
+	add edi, ebx
+
+	movzx eax, byte [esi + proc.prio]
+	movzx ecx, byte [esi + proc_size + proc.prio]
+
+	cmp eax, ecx
+	jg swap
+
+back:
+	inc ebx
+	cmp ebx, ecx
+	jl inner_loop
+
+	dec ecx
+	cmp ecx, 0
+	jg outer_loop
+
+done:
+
+
+swap:
+	mov esi, edx	; start from the beginning of the array
+	mov edi, edx	; store the current element
+
+	add esi, ebx	; add the outer loop counter to the array pointer
+	add edi, ebx	; add the outer loop counter to the array pointer
+
+	movzx eax, word [esi + proc.pid]		; get the pid of the current element
+	movzx ecx, word [edi + proc.pid + proc_size]		; get the pid of the next element
+
+	mov word [esi + proc.pid], cx       ; swap the pids
+    mov word [edi + proc.pid + proc_size], ax
+
+    movzx eax, byte [esi + proc.prio]   ; get the priority of the current element
+    movzx ecx, byte [edi + proc.prio + proc_size]   ; get the priority of the next element
+
+    mov byte [esi + proc.prio], cl      ; swap the priorities
+    mov byte [edi + proc.prio + proc_size], al
+
+    movzx eax, word [esi + proc.time]   ; get the time of the current element
+    movzx ecx, word [edi + proc.time + proc_size]   ; get the time of the next element
+
+    mov word [esi + proc.time], cx      ; swap the times
+    mov word [edi + proc.time + proc_size], ax
+	
+	jmp back
+
+; 	mov ebx, 0
+; 	mov ecx, 0
+
+; for_i:
+; 	cmp ebx, eax
+; 	jge end_for_i
+
+; 	mov esi, ebx
+; 	mov edi, ebx
+
+; 	add edi, 1
+
+; for_j:
+; 	cmp	
+
+
+
+
+
+; 	mov ecx, eax
+
+; for_i:
+; 	mov ebx, 0
+
+; 	mov esi, edx
+; 	mov edi, ecx
+
+; for_j:
+
+; 	mov al, byte [esi]
+; 	mov dl, byte [esi + 1]
+
+; 	cmp al, dl
+; 	jle no_swap
+
+; 	xchg al, dl
+
+; 	mov byte [esi], al
+; 	mov byte [esi + 1], dl
+
+; 	mov ebx, 1
+
+; no_swap:
+
+; 	inc esi
+; 	loop for_j
+
+; 	cmp ebx, 0
+; 	je sorted
+
+; 	dec ecx
+; 	jnz for_i
+
+
+
+
+
+
+
+; 	xor ebx, ebx
+; 	mov ecx, 1
+
+; for_i:
+; 	cmp ebx, eax
+; 	jge end_sort
+
+; 	mov esi, ebx
+; 	mov edi, ebx
+
+; 	dec edi
+
+; 	for_j:
+; 		cmp edi, -1
+; 		jl found_pos
+
+; 		movzx edx, byte [edx + edi*8 + proc.prio]
+;         movzx ecx, byte [edx + esi*8 + proc.prio]
+;         cmp edx, ecx
+
+; 		jle found_pos
+
+; 		xchg dword [edx + esi*8 + proc.pid], dword [edx + edi*8 + proc.pid]
+;         xchg word [edx + esi*8 + proc.time], word [edx + edi*8 + proc.time]
+;         xchg byte [edx + esi*8 + proc.prio], byte [edx + edi*8 + proc.prio]
+
+; 		dec edi
+;         jmp .for_j
+
+; 		found_pos:
+; 			inc ebx
+; 			jmp for_i
+
+; end_sort:
+
+
+
+
+	mov esi, edx ; save array in esi
+
+	mov ecx, eax
+	dec ecx ; i < n
+
+	xor eax, eax
+	mov eax, 0
+	;PRINTF32 `%d\n\x0`, eax
+for_i:
+	xor ebx, ebx
+	mov ebx, eax
+	inc ebx
+
+for_j:
+
+	
+
+; 	mov esi, proc_size ; size of each struc element
+
+; 	mov ecx, eax ; nr of structs in array
+
+
+; outer_loop:
+; 	mov ebx, ecx
+
+; inner_loop:
+
+; 	mov eax, [edx]
+; 	mov ebx, [edx + esi]
+
+; 	mov ecx, [eax + proc_size + proc.prio]
+
+; 	PRINTF32 `eax:%d\n\x0`, ecx
+
+; 	mov ecx, [ebx + proc_size + proc.prio]
+
+; 	PRINTF32 `ebx:%d\n\x0`, ecx
+
+; 	; load current struct in eax
+; ; 	mov eax, [edx]
+
+; ; 	; load next in ebx
+; ; 	mov ebx, [edx + esi]
+
+; ; 	mov ecx, [eax + proc.prio]
+; ; 	cmp ecx, [ebx + proc.prio]
+
+; ; 	ja swap
+
+; ; 	mov ecx, [eax + proc.time]
+; ; 	cmp ecx, [ebx + proc.time]
+
+; ; 	ja swap
+
+; ; 	mov ecx, [eax + proc.pid]
+; ; 	cmp ecx, [ebx + proc.pid]
+
+; ; 	jbe skip_swap
+
+
+; ; swap:
+; ; 	xchg eax, edx
+; ; 	mov [edx], eax
+; ; 	mov [edx + esi], edx
+
+; skip_swap:
+	
+; 	add edx, esi
+
+; 	sub ebx, 1
+
+; 	jnz inner_loop
+
+; 	sub ecx, 1
+
+; 	jnz outer_loop
+
+
+	;mov ecx, dword [edx + proc_size + proc.pid]
+
+
+!!!GOOD
+
+
+		mov esi, edx
+	mov ecx, eax
+
+	xor edx, edx
+
+print_loop:
+	xor eax, eax
+	xor ebx, ebx
+	xor edx, edx
+
+	mov ax, [esi + proc.pid]
+	movzx ebx, byte [esi + proc.prio]
+	mov dx, [esi + proc.time]
+
+
+	PRINTF32 `proc pid %d prio %d time %d step %d\n\x0`, eax, ebx, edx, ecx
+
+	add esi, proc_size
+
+	loop print_loop
+
+
+
+	mov esi, edx
+	mov ecx, eax
+
+	xor edx, edx
+
+	;; eax - i  
+	;; ebx - j (eax + 1 -. ecx)
+	;; ecx - len
+	;; edx - 
+
+	mov eax, 0
+
+for_i:
+	PRINTF32 `EAX: %d\n\x0`, eax
+	mov ebx, eax
+	inc ebx
+
+for_j:
+	PRINTF32 `EBX: %d\n\x0`, ebx
+	
+	movzx edx, byte [esi + proc.prio + proc_size * ebx] ; element on j pos
+	movzx edi, byte [esi + proc_size * eax + proc.prio]
+
+	cmp edx, edi
+
+	; if i > j
+	jg swap
+
+	mov dx, [esi + proc_size * ebx + proc.time]
+	mov edi, [esi + proc_size * eax + proc.time]
+
+	cmp dx, edi
+
+	jg swap
+
+	mov dx, [esi + proc_size * ebx + proc.pid]
+	mov di, [esi + proc_size * eax + proc.pid]
+
+	cmp edx, edi
+
+	jg swap
+
+res_iter:
+
+	cmp ebx, ecx
+	jle for_j
+	
+	inc eax
+	cmp eax, ecx
+
+	jl for_i
+
+swap:
+	jmp res_iter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+push eax
+	push ebx
+	push ecx
+	push edx
+
+	xor eax, eax
+	xor ebx, ebx
+	xor ecx, ecx
+	xor edx, edx
+
+	mov ax, [esi + proc.pid]
+	movzx ebx, byte [esi + proc.prio]
+	mov dx, [esi + proc.time]
+
+	; mov [esi + proc.pid], dword [edi + proc.pid]
+	; mov [esi + proc.prio], byte [edi + proc.prio]
+	; mov [esi + proc.time], dword [edi + proc.time]
+
+	xor ecx, ecx
+	mov cx, [edi + proc.pid]
+	mov [esi + proc.pid], cx
+
+	xor ecx, ecx
+	movzx ecx, byte [edi + proc.prio]
+	movzx [esi + proc.prio], ecx
+
+	xor ecx, ecx
+	mov cx, [edi + proc.time]
+	mov [esi + proc.time], cx
+
+	mov [edi + proc.pid], ax
+	mov [edi + proc.prio], ebx
+	mov [edi + proc.time], dx
+
+	pop edx
+	pop ecx
+	pop ebx
+	pop eax
+
+
+
+
+
+	 ;; Swap elements from the array given in edx and iterated using esi and edi
+
+    ; Save the values of the first struct (esi) in temporary variables
+    push dword [esi + proc.pid]    ; Save .pid value of first struct
+    push word [esi + proc.prio]     ; Save .prio value of first struct
+    push dword [esi + proc.time]   ; Save .time value of first struct
+
+    ; Copy the values of the second struct (edi) to the first struct (esi)
+    mov eax, [edi + proc.pid]      ; Copy .pid value of second struct to eax
+    mov [esi + proc.pid], eax      ; Store copied .pid value to first struct
+
+    movzx ax, byte [edi + proc.prio]   ; Copy .prio value of second struct to ax
+    mov [esi + proc.prio], al      ; Store copied .prio value to first struct
+
+    mov eax, [edi + proc.time]     ; Copy .time value of second struct to eax
+    mov [esi + proc.time], eax     ; Store copied .time value to first struct
+
+    ; Restore the values of the first struct (esi) from the temporary variables
+    pop dword [edi + proc.time]    ; Restore .time value of first struct
+    pop word [edi + proc.prio]     ; Restore .prio value of first struct
+    pop dword [edi + proc.pid]     ; Restore .pid value of first struct
+
+    ; Continue to the next iteration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+swap:
+    ;; Swap elements from the array given in edx and iterated using esi and edi
+
+    ; Save the values of the first struct (esi) in temporary variables
+    push dword [esi + proc.pid]    ; Save .pid value of first struct
+    push word [esi + proc.prio]    ; Save .prio value of first struct
+    push dword [esi + proc.time]   ; Save .time value of first struct
+
+    ; Copy the values of the second struct (edi) to the first struct (esi)
+    mov eax, [edi + proc.pid]      ; Copy .pid value of second struct to eax
+    mov [esi + proc.pid], eax      ; Store copied .pid value to first struct
+
+    mov ax, [edi + proc.prio]      ; Copy .prio value of second struct to ax
+    mov [esi + proc.prio], ax      ; Store copied .prio value to first struct
+
+    mov eax, [edi + proc.time]     ; Copy .time value of second struct to eax
+    mov [esi + proc.time], eax     ; Store copied .time value to first struct
+
+    ; Restore the values of the first struct (esi) from the temporary variables
+    pop dword [edi + proc.time]    ; Restore .time value of first struct
+
+    pop ax                         ; Pop word-sized value from the stack into ax
+    mov al, ah                     ; Move the higher byte (ah) to the lower byte (al)
+    mov [edi + proc.prio], al      ; Store restored .prio value to first struct
+
+    pop dword [edi + proc.pid]     ; Restore .pid value of first struct
+
+    ; Continue to the next iteration
+    jmp back
+
+
+
+
+
+
+
+
+
+
+
+
+
+		mov esi, edx
+	;mov edi, edx
+
+	mov ecx, eax
+
+	xor eax, eax
+	xor ebx, ebx
+
+	mov eax, 0
+
+for_i:
+	mov edi, esi
+	; inc edi
+
+	mov ebx, eax
+	inc ebx
+
+	push eax
+
+for_j:
+	add edi, proc_size
+
+	push ebx
+
+	xor eax, eax
+	xor ebx, ebx
+
+	movzx eax, byte [esi + proc.prio]
+	movzx ebx, byte [edi + proc.prio]
+
+	PRINTF32 `proc prio EAX: %d\n\x0`, eax
+	PRINTF32 `proc prio EBX: %d\n\x0`, ebx
+    
+	cmp eax, ebx
+
+	jg swap
+
+	xor eax, eax
+	xor ebx, ebx
+
+	mov ax, [esi + proc.time]
+	mov bx, [edi + proc.time]
+
+	cmp ax, bx
+
+	jg swap
+
+	xor eax, eax
+	xor ebx, ebx
+
+	mov ax, [esi + proc.pid]
+	mov bx, [edi + proc.pid]
+
+	cmp ax, bx
+
+	jg swap
+
+back:
+
+next_j:
+	xor ebx, ebx
+	pop ebx
+	inc ebx
+
+	cmp ebx, ecx
+	jle for_j
+
+next_i:
+	xor eax, eax
+	pop eax
+	inc eax
+
+	cmp eax, ecx
+	add esi, proc_size
+	jl for_i

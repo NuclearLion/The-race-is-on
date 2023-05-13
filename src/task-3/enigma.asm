@@ -4,6 +4,7 @@
 LETTERS_COUNT EQU 26
 
 section .data
+	var db 43
     extern len_plain
 
 section .text
@@ -26,6 +27,8 @@ rotate_x_positions:
     ;; TODO: Implement rotate_x_positions
     ;; FREESTYLE STARTS HERE
 
+	mov al, byte [var]
+	mov bl, al
 
     ;; FREESTYLE ENDS HERE
     ;; DO NOT MODIFY

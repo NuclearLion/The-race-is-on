@@ -25,15 +25,18 @@ string_loop:
 
 	add al, dl
 
+	; check if the letter in al is smaller than 'Z'
 	cmp al, 90
 
 	jle smaller
 
+	; if not, map it in A - Z
 	sub al, 90
 	add al, 64
 
-
+; if it is / after mapping
 smaller:
+	; move the new letter in edi for output 
 	mov byte [edi], al
 	inc edi
 	inc esi
