@@ -1,0 +1,13 @@
+	; mov edx, 8 ; M = 8
+	; dec edx ; M - 1
+	; sub edx, eax ; M - 1 - x
+
+	; xor eax, eax
+	; mov eax, edx ; M - 1 - x
+
+	; xor edx, edx
+	; mov dx, 8
+
+	; mul dx ; ax = (M - 1 - x) * N
+
+	; add eax, ebx ; case index in matrix
