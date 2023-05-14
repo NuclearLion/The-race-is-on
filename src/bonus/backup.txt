@@ -1,0 +1,61 @@
+
+upper_left:
+	push eax
+	push ebx
+
+	inc eax
+	dec ebx
+
+	cmp eax, 0
+	jl no_place_ul
+
+	cmp eax, 7
+	jg no_place_ul
+
+	cmp ebx, 0
+	jl no_place_ul
+
+	cmp ebx, 7
+	jg no_place_ul
+
+	mov dx, 8
+	mul dx
+
+	add ax, bx
+
+	cmp ax, 32
+	jge
+
+	mov ecx, eax
+	mov ebx, 1
+
+	shl ebx, cl
+
+	PRINTF32 `ul EBX: %d\n\x0`, ebx
+
+	cmp ebx, 2147483647
+	jg second_esi_ul
+
+	add [esi], ebx
+	xor ecx, ecx
+	; PRINTF32 `in 1st ul \n\x0`
+	jmp no_place_ul
+
+second_esi_ul:
+; 	; PRINTF32 `in 2nd ul \n\x0`
+ 	add esi, 2
+
+	; shr ebx, 32
+ 	add [esi], ebx
+
+ 	sub esi, 2
+; 	xor ecx, ecx
+	; mov ecx, [esi]
+
+	; PRINTF32 `ECX from ESI: %d\n\x0`, ecx
+
+	; xor ecx, ecx
+	
+no_place_ul:
+	pop ebx
+	pop eax

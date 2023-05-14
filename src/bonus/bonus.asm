@@ -48,36 +48,33 @@ upper_left:
 
 	add ax, bx
 
-	; esi the number
-	; ecx n-th bit
+	cmp ax, 32
+	jl second_esi_ul
 
 	mov ecx, eax
 	mov ebx, 1
 
 	shl ebx, cl
 
-	; PRINTF32 `EBX for or: %d\n\x0`, ebx
-
-	cmp ebx, 2147483648 ;2^31
-	jg second_esi_ul
-
 	add [esi], ebx
 	xor ecx, ecx
-	; PRINTF32 `in 1st ul \n\x0`
+
 	jmp no_place_ul
 
 second_esi_ul:
-	; PRINTF32 `in 2nd ul \n\x0`
+	sub ax, 32
+
+	mov ecx, eax
+	mov ebx, 1
+
+	shl ebx, cl
+
 	add esi, 4
 
 	add [esi], ebx
-	sub esi, 4
+
+	sub esi,4
 	xor ecx, ecx
-	; mov ecx, [esi]
-
-	; PRINTF32 `ECX from ESI: %d\n\x0`, ecx
-
-	; xor ecx, ecx
 	
 no_place_ul:
 	pop ebx
@@ -107,37 +104,34 @@ upper_right:
 
 	add ax, bx
 
+	cmp ax, 32
+	jl second_esi_ur
 
-	; mov dword [esi], dword 1
 	mov ecx, eax
 	mov ebx, 1
 
 	shl ebx, cl
 
-	; PRINTF32 `EBX for or: %d\n\x0`, ebx
-
-	cmp ebx, 2147483648 ;2^31
-	jg second_esi_ur
-
-	; PRINTF32 `in 1st ur \n\x0`
 	add [esi], ebx
 	xor ecx, ecx
 
 	jmp no_place_ur
 
 second_esi_ur:
-; PRINTF32 `in 2nd ur \n\x0`
+	sub ax, 32
+
+	mov ecx, eax
+	mov ebx, 1
+
+	shl ebx, cl
+
 	add esi, 4
+
 	add [esi], ebx
-	sub esi, 4
+
+	sub esi,4
 	xor ecx, ecx
-
-	; mov ecx, [esi]
-
-	; PRINTF32 `ECX from ESI: %d\n\x0`, ecx
-
-	; xor ecx, ecx
-
+	
 no_place_ur:
 	pop ebx
 	pop eax
@@ -166,17 +160,13 @@ lower_left:
 
 	add ax, bx
 
+	cmp ax, 32
+	jl second_esi_ll
 
 	mov ecx, eax
 	mov ebx, 1
 
 	shl ebx, cl
-
-	; PRINTF32 `EBX for or: %d\n\x0`, ebx
-
-	cmp ebx, 2147483648 ;2^31
-	jl second_esi_ll
-
 
 	add [esi], ebx
 	xor ecx, ecx
@@ -184,10 +174,19 @@ lower_left:
 	jmp no_place_ll
 
 second_esi_ll:
+	sub ax, 32
+
+	mov ecx, eax
+	mov ebx, 1
+
+	shl ebx, cl
+
 	add esi, 4
+
 	add [esi], ebx
+
+	sub esi,4
 	xor ecx, ecx
-	sub esi, 4
 
 no_place_ll:
 	pop ebx
@@ -219,16 +218,13 @@ lower_right:
 	add ax, bx
 
 
+	cmp ax, 32
+	jl second_esi_lr
+
 	mov ecx, eax
 	mov ebx, 1
 
 	shl ebx, cl
-
-	; PRINTF32 `EBX for or: %d\n\x0`, ebx
-
-	cmp ebx, 2147483648 ;2^31
-	jl second_esi_lr
-
 
 	add [esi], ebx
 	xor ecx, ecx
@@ -236,10 +232,19 @@ lower_right:
 	jmp no_place_lr
 
 second_esi_lr:
+	sub ax, 32
+
+	mov ecx, eax
+	mov ebx, 1
+
+	shl ebx, cl
+
 	add esi, 4
+
 	add [esi], ebx
+
+	sub esi,4
 	xor ecx, ecx
-	sub esi, 4
 
 
 no_place_lr:
@@ -252,3 +257,17 @@ no_place_lr:
     leave
     ret
     ;; DO NOT MODIFY
+
+
+
+
+
+
+
+;100000000000000000000000000000
+;536870912
+
+; 00100000
+; 00000000
+; 00000000
+; 00000000
