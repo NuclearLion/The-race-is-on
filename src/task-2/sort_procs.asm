@@ -109,7 +109,6 @@ next_j:
 next_i:
 	xor eax, eax
 	pop eax
-	; inc eax
 
 	add esi, proc_size
 
@@ -117,7 +116,6 @@ next_i:
 	jl for_i
 
 end:
-
 
     ;; Your code ends here
     
