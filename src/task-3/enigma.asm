@@ -56,6 +56,8 @@ decide_direction:
 	cmp edx, 0
 	jg shift_right
 
+	; PRINTF32 `Shift left with EAX: %d\n\x0`, eax
+
 	; can use ebx, ecx and edx
 	; eax - x
 	
@@ -105,32 +107,87 @@ loop_end_x: ; values from index 0 to index x (without x)
 	jl loop_end_x
 	jmp start_overwrite
 
-
-
-
-
 start_overwrite:
 
 	xor ecx, ecx
 loop_overwrite_rotors:
-	xor edx, edx
+	; xor edx, edx
 
-	mov dl, byte [rotate_line_alphabet + ecx]
-	mov [esi + ecx], dl
+	; mov dl, byte [rotate_line_alphabet + ecx]
+	; mov [esi + ecx], dl
 
-	xor edx, edx
-	mov dl, byte [rotate_line_link + ecx]
-	mov [esi + 26 + ecx], dl	
+	; xor edx, edx
+	; mov dl, byte [rotate_line_link + ecx]
+	; mov [esi + 26 + ecx], dl	
 
-	inc ecx
-	cmp ecx, 26
-	jl loop_overwrite_rotors
+	; inc ecx
+	; cmp ecx, 26
+	; jl loop_overwrite_rotors
 
 	jmp end
 
 
 shift_right:
-	jmp end
+	; PRINTF32 `Shift right with EAX: %d\n\x0`, eax
+	
+	xor ebx, ebx ; index in new array
+	push eax
+	xor ecx, ecx
+
+loop_last_elem:
+	xor edx, edx
+	mov dl, byte [esi + ebx]
+	mov [rotate_line_alphabet + eax], dl
+	
+
+	mov dl, byte [esi + ebx + 26]
+	mov [rotate_line_link + eax], dl
+
+	inc ebx
+	inc eax
+
+	cmp eax, 26
+	jl loop_last_elem
+
+	pop eax
+	xor ecx, ecx
+
+loop_first_elem:
+	xor edx, edx
+	mov dl, byte [esi + ebx]
+	mov [rotate_line_alphabet + ecx], dl
+
+	mov dl, byte [esi + ebx + 26]
+	mov [rotate_line_link + ecx], dl
+
+
+
+	inc ebx
+	inc ecx
+
+	cmp ecx, eax
+	jl loop_first_elem
+
+; ----debug----
+	xor edx, edx
+	xor ecx, ecx
+loop_print_array:
+	xor edx, edx
+	; mov dl, byte [rotate_line_alphabet + ecx]
+	; PRINTF32 `value from array in DX: %d\n\x0`, edx
+
+	mov dl, byte [rotate_line_alphabet + ecx]
+	PRINTF32 `value from array in DX: %d\n\x0`, edx
+	
+
+	inc ecx
+	cmp ecx, 26
+	jl loop_print_array
+
+	PRINTF32 `\nPENIISSSSS\n\n\n\x0`, edx
+
+; ----debug----
+
 
 
 end:

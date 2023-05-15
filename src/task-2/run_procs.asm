@@ -96,7 +96,7 @@ set_results:
 	xor eax, eax 
 	xor ebx, ebx
 
-	mov eax, dword [time_result+ edx * 4]
+	mov eax, dword [time_result + edx * 4]
 	mov ebx, dword [prio_result + edx * 4]
 
 	xor edx, edx
