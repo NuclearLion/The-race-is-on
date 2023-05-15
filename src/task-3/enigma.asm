@@ -111,25 +111,27 @@ start_overwrite:
 
 	xor ecx, ecx
 loop_overwrite_rotors:
-	; xor edx, edx
+	xor edx, edx
 
-	; mov dl, byte [rotate_line_alphabet + ecx]
-	; mov [esi + ecx], dl
+	mov dl, byte [rotate_line_alphabet + ecx]
+	mov [esi + ecx], dl
 
-	; xor edx, edx
-	; mov dl, byte [rotate_line_link + ecx]
-	; mov [esi + 26 + ecx], dl	
+	xor edx, edx
+	mov dl, byte [rotate_line_link + ecx]
+	mov [esi + 26 + ecx], dl	
 
-	; inc ecx
-	; cmp ecx, 26
-	; jl loop_overwrite_rotors
+	inc ecx
+	cmp ecx, 26
+	jl loop_overwrite_rotors
 
 	jmp end
 
 
 shift_right:
 	; PRINTF32 `Shift right with EAX: %d\n\x0`, eax
-	
+	cmp eax, 0
+	je end
+
 	xor ebx, ebx ; index in new array
 	push eax
 	xor ecx, ecx
@@ -169,25 +171,26 @@ loop_first_elem:
 	jl loop_first_elem
 
 ; ----debug----
-	xor edx, edx
-	xor ecx, ecx
-loop_print_array:
-	xor edx, edx
-	; mov dl, byte [rotate_line_alphabet + ecx]
-	; PRINTF32 `value from array in DX: %d\n\x0`, edx
+; 	xor edx, edx
+; 	xor ecx, ecx
+; loop_print_array:
+; 	xor edx, edx
+; 	; mov dl, byte [rotate_line_alphabet + ecx]
+; 	; PRINTF32 `value from array in DX: %d\n\x0`, edx
 
-	mov dl, byte [rotate_line_alphabet + ecx]
-	PRINTF32 `value from array in DX: %d\n\x0`, edx
+; 	mov dl, byte [rotate_line_alphabet + ecx]
+; 	PRINTF32 `value from array in DX: %d\n\x0`, edx
 	
 
-	inc ecx
-	cmp ecx, 26
-	jl loop_print_array
+; 	inc ecx
+; 	cmp ecx, 26
+; 	jl loop_print_array
 
-	PRINTF32 `\nPENIISSSSS\n\n\n\x0`, edx
+; 	PRINTF32 `\nPENIISSSSS\n\n\n\x0`, edx
 
 ; ----debug----
 
+	jmp start_overwrite
 
 
 end:
