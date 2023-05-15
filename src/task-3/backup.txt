@@ -1,0 +1,75 @@
+
+	xor ebx, ebx 
+	push eax
+	; start from position 26 - eax
+
+	mov ebx, 26
+	sub ebx, eax
+
+	mov eax, ebx ; current index
+	xor ebx, ebx ; index in new arrays
+
+loop_last_x_elements:
+	xor edx, edx
+	mov dl, byte [esi + eax]
+	mov [rotate_line_alphabet + ebx], dl
+
+	; ----debug----
+	; xor edx, edx
+	; mov dl, [rotate_line_alphabet + ebx]
+	; PRINTF32 `rot_l_alph %d\n\x0`, edx
+
+	; ----debug----
+
+	mov dl, byte [esi + eax + 26]
+	mov [rotate_line_link + ebx], dl
+
+	inc ebx
+	inc eax
+
+	cmp eax, 26
+	jl loop_last_x_elements
+
+
+	pop eax ; get back the offset
+	xor ecx, ecx ; index in esi, but values before x
+	add ecx, eax ; start from offset value
+
+loop_elements_after_x: ; values from index 0 to index x (without x)
+	xor edx, edx
+	mov dl, byte [esi + ecx]
+	mov [rotate_line_alphabet + ebx], dl
+
+	mov dl, byte [esi + ecx + 26]
+	mov [rotate_line_link + ebx], dl
+
+	inc ebx
+	inc ecx
+
+	cmp ebx, 26
+	jl loop_elements_after_x
+
+
+
+
+
+
+	; ----debug----
+; 	xor edx, edx
+; 	xor ecx, ecx
+; loop_print_array:
+; 	xor edx, edx
+; 	; mov dl, byte [rotate_line_alphabet + ecx]
+; 	; PRINTF32 `value from array in DX: %d\n\x0`, edx
+
+; 	mov dl, byte [rotate_line_link + ecx]
+; 	PRINTF32 `value from array in DX: %d\n\x0`, edx
+	
+
+; 	inc ecx
+; 	cmp ecx, 26
+; 	jl loop_print_array
+
+; 	PRINTF32 `\nPENIISSSSS\n\n\n\x0`, edx
+
+	; ----debug----

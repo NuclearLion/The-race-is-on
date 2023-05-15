@@ -4,8 +4,9 @@
 LETTERS_COUNT EQU 26
 
 section .data
-	var db 43
     extern len_plain
+	rotate_line_alphabet TIMES 26 db 0
+	rotate_line_link TIMES 26 db 0
 
 section .text
     global rotate_x_positions
@@ -27,9 +28,112 @@ rotate_x_positions:
     ;; TODO: Implement rotate_x_positions
     ;; FREESTYLE STARTS HERE
 
-	mov al, byte [var]
-	mov bl, al
+	mov esi, ecx ; move matrix in esi
 
+	cmp ebx, 0
+	jg second_rot
+	; PRINTF32 `first el: %d\n\x0`, ebx
+	
+	; 1st rotor is already set
+	jmp decide_direction
+
+
+second_rot:
+	cmp ebx, 1
+	jg third_rot
+
+	;2nd rotor
+	add esi, 52
+
+	jmp decide_direction
+
+third_rot:
+	;3rd rotor
+	add esi, 104
+
+
+decide_direction:
+	cmp edx, 0
+	jg shift_right
+
+	; can use ebx, ecx and edx
+	; eax - x
+	
+;	A B C D E F G - alh
+;	D E F G A B C - link
+
+	xor ebx, ebx ; index in new arrays
+	push eax
+
+loop_start_x:
+	xor edx, edx
+	mov dl, byte [esi + eax]
+	mov [rotate_line_alphabet + ebx], dl
+
+	; ----debug----
+	; xor edx, edx
+	; mov dl, [rotate_line_alphabet + ebx]
+	; PRINTF32 `rot_l_alph %d\n\x0`, edx
+
+	; ----debug----
+
+	mov dl, byte [esi + eax + 26]
+	mov [rotate_line_link + ebx], dl
+
+	inc ebx
+	inc eax
+
+	cmp eax, 26
+	jl loop_start_x
+
+
+	pop eax ; get back the offset
+	xor ecx, ecx ; index in esi, but values before x
+
+loop_end_x: ; values from index 0 to index x (without x)
+	xor edx, edx
+	mov dl, byte [esi + ecx]
+	mov [rotate_line_alphabet + ebx], dl
+
+	mov dl, byte [esi + ecx + 26]
+	mov [rotate_line_link + ebx], dl
+
+	inc ebx
+	inc ecx
+
+	cmp ebx, 26
+	jl loop_end_x
+	jmp start_overwrite
+
+
+
+
+
+start_overwrite:
+
+	xor ecx, ecx
+loop_overwrite_rotors:
+	xor edx, edx
+
+	mov dl, byte [rotate_line_alphabet + ecx]
+	mov [esi + ecx], dl
+
+	xor edx, edx
+	mov dl, byte [rotate_line_link + ecx]
+	mov [esi + 26 + ecx], dl	
+
+	inc ecx
+	cmp ecx, 26
+	jl loop_overwrite_rotors
+
+	jmp end
+
+
+shift_right:
+	jmp end
+
+
+end:
     ;; FREESTYLE ENDS HERE
     ;; DO NOT MODIFY
     popa
@@ -52,6 +156,7 @@ enigma:
     ;; DO NOT MODIFY
     ;; TODO: Implement enigma
     ;; FREESTYLE STARTS HERE
+
 
 
     ;; FREESTYLE ENDS HERE

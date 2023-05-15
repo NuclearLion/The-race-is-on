@@ -73,7 +73,7 @@ second_esi_ul:
 
 	add [esi], ebx
 
-	sub esi,4
+	sub esi, 4
 	xor ecx, ecx
 	
 no_place_ul:
@@ -129,7 +129,7 @@ second_esi_ur:
 
 	add [esi], ebx
 
-	sub esi,4
+	sub esi, 4
 	xor ecx, ecx
 	
 no_place_ur:
