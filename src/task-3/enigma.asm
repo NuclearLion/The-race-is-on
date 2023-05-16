@@ -1,9 +1,11 @@
 ; Copyrigth (c) 2023, <Dan-Dominic Staicu>
-%include "../include/io.mac"
-
 
 ;; defining constants, you can use these as immediate values in your code
 LETTERS_COUNT EQU 26
+STACK_SIZE_SEARCH EQU 12
+STACK_SIZE_ROTATE EQU 16
+CODE_A EQU 65
+CODE_Z EQU 90
 
 section .data
     extern len_plain
@@ -15,7 +17,6 @@ section .data
 section .text
     global rotate_x_positions
     global enigma
-	extern printf
 
 ; void rotate_x_positions(int x, int rotor, char config[10][26], int forward);
 rotate_x_positions:
@@ -74,15 +75,14 @@ loop_start_x: ; values from index x to index 25
 	mov dl, byte [esi + eax] ; get the letter from 1st col
 	mov [rotate_line_alphabet + ebx], dl ; save it in new array
 
-	mov dl, byte [esi + eax + 26] ; get the letter from 2nd col
+	mov dl, byte [esi + eax + LETTERS_COUNT] ; get the letter from 2nd col
 	mov [rotate_line_link + ebx], dl ; save it in new array
 
 	inc ebx ; increment index in new array
 	inc eax ; increment index in old array
 
-	cmp eax, 26 ; check if we reached the end
+	cmp eax, LETTERS_COUNT ; check if we reached the end
 	jl loop_start_x
-
 
 	pop eax ; get back the offset
 	xor ecx, ecx ; index in esi, but values before x
@@ -92,13 +92,13 @@ loop_end_x: ; values from index 0 to index x (without x)
 	mov dl, byte [esi + ecx] ; get the letter from 1st col
 	mov [rotate_line_alphabet + ebx], dl ; save it in new array
 
-	mov dl, byte [esi + ecx + 26] ; get the letter from 2nd col
+	mov dl, byte [esi + ecx + LETTERS_COUNT] ; get the letter from 2nd col
 	mov [rotate_line_link + ebx], dl ; save it in new array
 
 	inc ebx ; increment index in new array
 	inc ecx ; increment index in old array
 
-	cmp ebx, 26 ; check if we reached the end
+	cmp ebx, LETTERS_COUNT ; check if we reached the end
 	jl loop_end_x ; if not, continue
 	jmp start_overwrite ; overwrite the old array with the new one
 
@@ -113,10 +113,10 @@ loop_overwrite_rotors:
 
 	xor edx, edx
 	mov dl, byte [rotate_line_link + ecx] ; get the letter from 2nd col
-	mov [esi + 26 + ecx], dl ; save it in new array
+	mov [esi + LETTERS_COUNT + ecx], dl ; save it in new array
 
 	inc ecx ; increment index in old array
-	cmp ecx, 26 ; check if we reached the end
+	cmp ecx, LETTERS_COUNT ; check if we reached the end
 	jl loop_overwrite_rotors ; if not, continue
 
 	jmp end ; end of function
@@ -135,14 +135,13 @@ loop_last_elem: ; values from index x to index 25
 	mov dl, byte [esi + ebx] ; get the letter from 1st col
 	mov [rotate_line_alphabet + eax], dl ; save it in new array
 	
-
-	mov dl, byte [esi + ebx + 26] ; get the letter from 2nd col
+	mov dl, byte [esi + ebx + LETTERS_COUNT] ; get the letter from 2nd col
 	mov [rotate_line_link + eax], dl ; save it in new array
 
 	inc ebx ; increment index in new array
 	inc eax ; increment index in old array
 
-	cmp eax, 26 ; check if we reached the end
+	cmp eax, LETTERS_COUNT ; check if we reached the end
 	jl loop_last_elem ;	if not, continue
 
 	pop eax ; get back the offset
@@ -153,7 +152,7 @@ loop_first_elem: ; values from index 0 to index x (without x)
 	mov dl, byte [esi + ebx] ; get the letter from 1st col
 	mov [rotate_line_alphabet + ecx], dl ; save it in new array
 
-	mov dl, byte [esi + ebx + 26] ; get the letter from 2nd col
+	mov dl, byte [esi + ebx + LETTERS_COUNT] ; get the letter from 2nd col
 	mov [rotate_line_link + ecx], dl ; save it in new array
 
 	inc ebx ; increment index in new array
@@ -206,11 +205,7 @@ iter_col2:
 	jne iter_col2 ; if not equal, continue
 
 no_iter_col2: ; if equal, return
-; 	cmp eax, 26 ;TODO
-; 	jl end_search_in_rotor
 
-; 	xor eax, eax
-; end_search_in_rotor:
 	pop ebp
 	pop edi
 	pop esi
@@ -252,12 +247,12 @@ iter_plain:
 
 	mov al, byte [ebx + 2] ; get 3rd rotor key
 	mov ah, al ; save 3rd rotor key
-	add al, 1 ; increment 3rd rotor key
+	inc al ; increment 3rd rotor key
 
-	cmp al, 90 ; check if 3rd rotor key is in range
+	cmp al, CODE_Z ; check if 3rd rotor key is in range
 	jle in_range_z1
 
-	sub al, 26 ; if not, substract 26
+	sub al, LETTERS_COUNT ; if not, substract 26
 
 in_range_z1: ; 3rd rotor key is in range 
 	mov byte [ebx + 2], al ; save new 3rd rotor key
@@ -267,7 +262,7 @@ in_range_z1: ; 3rd rotor key is in range
 	push dword 2 ; rotor3
 	push dword 1 ; offset
 	call rotate_x_positions ; rotate 3rd
-	add esp, 16 
+	add esp, STACK_SIZE_ROTATE 
 
 	cmp ah, byte [ecx + 2] ; check if 3rd rotor is in notch position
 	mov ah, byte [ebx + 1] ; key of 2nd rot
@@ -276,12 +271,12 @@ in_range_z1: ; 3rd rotor key is in range
 
 	; rotate the 2nd rotor
 	mov al, ah
-	add al, 1
+	inc al
 
-	cmp al, 90 
+	cmp al, CODE_Z 
 	jle in_range_z2
 
-	sub al, 26
+	sub al, LETTERS_COUNT
 
 in_range_z2: ; 2nd rotor key is in range
 	mov byte [ebx + 1], al
@@ -291,7 +286,7 @@ in_range_z2: ; 2nd rotor key is in range
 	push dword 1
 	push dword 1
 	call rotate_x_positions ; rotate the 2nd rotor
-	add esp, 16 ; clear stack
+	add esp, STACK_SIZE_ROTATE ; clear stack
 
 no_rotate_rot_2: ; no rotate 2nd rot
 	cmp ah, byte [ecx + 1] ; check if 2nd rotor is in notch position
@@ -299,7 +294,7 @@ no_rotate_rot_2: ; no rotate 2nd rot
 	jne no_rotate_rot_1 ; no rotate 1st rot
 
 	; rotate the 2nd key
-	add ah, 1
+	inc ah
 	mov byte [ebx + 1], ah
 
 	push dword 0
@@ -307,16 +302,16 @@ no_rotate_rot_2: ; no rotate 2nd rot
 	push dword 1
 	push dword 1
 	call rotate_x_positions ; rotate the 2nd rotor
-	add esp, 16
+	add esp, STACK_SIZE_ROTATE
 
 	mov al, byte [ebx] ; key of the 1st rot
 
-	add al, 1
+	inc al
 
-	cmp al, 90
+	cmp al, CODE_Z
 	jle in_range_z3
 
-	sub al, 26
+	sub al, LETTERS_COUNT ; if not, map it under 26
 
 in_range_z3: ; check if 1st rotor is in notch position
 	mov byte [ebx], al
@@ -326,57 +321,57 @@ in_range_z3: ; check if 1st rotor is in notch position
 	push dword 0
 	push dword 1
 	call rotate_x_positions ; rotate the 1st rot
-	add esp, 16
+	add esp, STACK_SIZE_ROTATE
 
 no_rotate_rot_1: ; no rotate 1st rot
 	mov ecx, [current_index] ; get current_index
 	xor eax, eax
 	add al, byte [esi + ecx] ; current letter from plain
-	sub eax, 65 ; get start index
+	sub eax, CODE_A ; get start index
 
 	; search in the plugboard
 	push eax ; given index - param 3
 
 	mov eax, edx
-	add eax, 208 ; 2nd col of plugboard
+	add eax, 8 * LETTERS_COUNT ; 2nd col of plugboard
 	push eax ; param 2
 
 	mov eax, edx
-	add eax, 234 ; 1st col of plugboard
+	add eax, 9 * LETTERS_COUNT ; 1st col of plugboard
 	push eax ; param  1
 
 	call search_in_rotor ; search in the plugboard
-	add esp, 12
+	add esp, STACK_SIZE_SEARCH
 
 
 	; search in 3rd rotor
 	push eax ;param 3
 
 	mov eax, edx
-	add eax, 104 ; 2nd col of 3rd rotor
+	add eax, 4 * LETTERS_COUNT ; 2nd col of 3rd rotor
 	push eax ;param 2
 
 	mov eax, edx
-	add eax, 130 ; 1st col of 3rd rotor
+	add eax, 5 * LETTERS_COUNT; 1st col of 3rd rotor
 	push eax ;param 1
 
 	call search_in_rotor ; search in 3rd rotor
-	add esp, 12
+	add esp, STACK_SIZE_SEARCH
 
 
 	; search in the 2nd rotor
 	push eax ;param 3
 
 	mov eax, edx
-	add eax, 52 ; 2nd col of 2nd rotor
+	add eax, 2 * LETTERS_COUNT ; 2nd col of 2nd rotor
 	push eax;param 2
 
 	mov eax, edx
-	add eax, 78 ; 1st col of 1st rotor
+	add eax, 3 * LETTERS_COUNT ; 1st col of 1st rotor
 	push eax ;param 1
 
 	call search_in_rotor ; search in the 2nd rotor
-	add esp, 12
+	add esp, STACK_SIZE_SEARCH
 
 	
 	; search in the 1st rotor
@@ -387,33 +382,33 @@ no_rotate_rot_1: ; no rotate 1st rot
 	push eax ;param 2
 
 	mov eax, edx 
-	add eax, 26 ; 1st col of 1st rotor
+	add eax, LETTERS_COUNT ; 1st col of 1st rotor
 	push eax ;param 1
 
 	call search_in_rotor ; search in the 1st rotor
-	add esp, 12
+	add esp, STACK_SIZE_SEARCH
 
 
 	; search in the reflector
 	push eax ;param 3
 
 	mov eax, edx
-	add eax, 156 ; 2nd col of reflector
+	add eax, 6 * LETTERS_COUNT ; 2nd col of reflector
 	push eax ;param 2
 
 	mov eax, edx
-	add eax, 182 ; 1st col of reflector
+	add eax, 7 * LETTERS_COUNT ; 1st col of reflector
 	push eax ; param 1
 
 	call search_in_rotor ; search in the reflector
-	add esp, 12
+	add esp, STACK_SIZE_SEARCH
 
 
 	; search back in the 1st rotor
 	push eax ;param 3
 
 	mov eax, edx
-	add eax, 26
+	add eax, LETTERS_COUNT
 	push eax ;2nd col of 1st rotor ; param 2
 
 	mov eax, edx
@@ -421,57 +416,59 @@ no_rotate_rot_1: ; no rotate 1st rot
 	push eax ; param  1
 
 	call search_in_rotor ; search back in the 1st rotor
-	add esp, 12
+	add esp, STACK_SIZE_SEARCH
 
 
 	; search back in the 2nd rotor
 	push eax ; param 3
 
 	mov eax, edx
-	add eax, 78 ; 2nd col of 2nd rotor
+	add eax, 3 * LETTERS_COUNT ; 2nd col of 2nd rotor
 	push eax ;param 2
 
 	mov eax, edx
-	add eax, 52 ; 1st col of 1st rotor
+	add eax, 2 * LETTERS_COUNT ; 1st col of 1st rotor
 	push eax ;param 1
 
 	call search_in_rotor ; search back in the 2nd rotor
-	add esp, 12
+	add esp, STACK_SIZE_SEARCH
 
 
 	; search back in 3rd rotor
 	push eax ; param 3
 
 	mov eax, edx
-	add eax, 130 ; 2nd col of 3rd rotor
+	add eax, 5 * LETTERS_COUNT ; 2nd col of 3rd rotor
 	push eax ;param 2
 
 	mov eax, edx
-	add eax, 104 ; 1st col of 3rd rotor
+	add eax, 4 * LETTERS_COUNT ; 1st col of 3rd rotor
 	push eax ; param 1
 
 	call search_in_rotor ; search back in 3rd rotor
-	add esp, 12
+	add esp, STACK_SIZE_SEARCH
 
 
 	; search back in the plugboard
 	push eax ; given index ; param 1
 	
 	mov eax, edx
-	add eax, 234 ; 2nd col of plugboard
+	add eax, 9 * LETTERS_COUNT; 2nd col of plugboard
 	push eax ;param 2
 
 	mov eax, edx
-	add eax, 208 ; 1st col of plugboard
+	add eax, 8 * LETTERS_COUNT; 1st col of plugboard
 	push eax ; param 1
 
 	call search_in_rotor ; search back in the plugboard
-	add esp, 12	
+	add esp, STACK_SIZE_SEARCH	
 
 
-	add eax, 65 ; get the letter
+	add eax, CODE_A ; get the letter
 
-	mov byte [edi + ecx], al ; save the current letter
+	mov byte [edi], al ; save the current letter
+	inc edi ; increment the pointer to the result string
+
 	inc ecx ; increment the index
 	mov [current_index], ecx ; save the current index
 	mov eax, [len_plain] ; get the length of the plain text
@@ -481,7 +478,7 @@ no_rotate_rot_1: ; no rotate 1st rot
 	cmp eax, 0 ; if we have, jump to the end
 	jne iter_plain ; if not, iterate again
 
-	mov byte [edi + ecx], 0 ; terminate the string
+	mov byte [edi], 0 ; terminate the string
 
     ;; FREESTYLE ENDS HERE
     ;; DO NOT MODIFY
