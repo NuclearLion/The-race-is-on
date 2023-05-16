@@ -197,20 +197,23 @@ search_in_rotor:
 	push edi
 	push ebp
 
-	mov ecx, [ebp + 8] ; 1st col
+	mov edi, [ebp + 8] ; 1st col
 	mov esi, [ebp + 12] ; 2nd col
 	mov ebx, [ebp + 16] ; given index
 
-	mov dl, byte [ecx + ebx]
+	xor eax, eax
+	xor ecx, ecx
+	xor edx, edx
 
-	xor eax, eax	
+	mov dl, byte [edi + ebx]
 
 iter_col2:
-	cmp dl, byte [esi + eax]
+	mov cl, byte [esi + eax]
+	cmp dl, cl
 	je no_iter_col2
 
+	; inc esi
 	inc eax
-	inc ecx
 
 	jne iter_col2
 
@@ -250,8 +253,8 @@ enigma:
 	mov [notches], ecx ; save notches ;TODO ??
 	mov esi, eax ; save plain in esi
 	mov [cnt], dword 0
-	xor eax, eax
-	xor ecx, ecx
+	; xor eax, eax
+	; xor ecx, ecx
 	
 iter_plain:
 	mov ecx, [notches]
@@ -262,11 +265,11 @@ iter_plain:
 	add al, 1
 
 	cmp al, 90
-	jle map_letter_z1
+	jle in_range_z1
 
 	sub al, 26
 
-map_letter_z1:
+in_range_z1:
 	mov byte [ebx + 2], al
 
 	push dword 0
@@ -276,8 +279,12 @@ map_letter_z1:
 	call rotate_x_positions ; rotate 3rd
 	add esp, 16 
 
+
+
+
+
 	cmp ah, byte [ecx + 2]
-	mov ah, byte [ebx + 2] ; key of 2nd rot
+	mov ah, byte [ebx + 1] ; key of 2nd rot
 
 	jne no_rotate_rot_0
 
@@ -285,12 +292,12 @@ map_letter_z1:
 	mov al, ah
 	add al, 1
 
-	cmp al, 90
-	jle map_letter_z2
+	cmp al, 90 
+	jle in_range_z2
 
 	sub al, 26
 
-map_letter_z2:
+in_range_z2:
 	mov byte [ebx + 1], al
 
 	push dword 0
@@ -321,11 +328,11 @@ no_rotate_rot_0:
 	add al, 1
 
 	cmp al, 90
-	jle map_letter_z3
+	jle in_range_z3
 
 	sub al, 26
 
-map_letter_z3:
+in_range_z3:
 	mov byte [ebx], al
 
 	push dword 0
@@ -338,56 +345,61 @@ map_letter_z3:
 no_rotate_rot_1:
 	mov ecx, [cnt]
 	xor eax, eax
-	add ah, byte [esi + ecx] ; current letter from plain
-	sub eax, 60 ; get start index
+	add al, byte [esi + ecx] ; current letter from plain
+	sub eax, 65 ; get start index
+
+	; PRINTF32 `EAX start index: %d\n\x0`, eax
 
 	; search in the plugboard
 	push eax ; given index - param 3
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 234 ; 2nd col of plugboard
+	add eax, 208 ; 2nd col of plugboard
 	push eax ; param 2
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 208 ; 1st col of plugboard
+	add eax, 234 ; 1st col of plugboard
 	push eax ; param  1
 	; xor eax, eax
 
 	call search_in_rotor ; search in the plugboard
 	add esp, 12
 
+	; PRINTF32 `eax after plug board: %d\n\x0`, eax
 
+third_rotor_label:
 	; search in 3rd rotor
 	push eax ;param 3
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 130 ; 2nd col of 3rd rotor
+	add eax, 104 ; 2nd col of 3rd rotor
 	push eax ;param 2
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 104 ; 1st col of 3rd rotor
+	add eax, 130 ; 1st col of 3rd rotor
 	push eax ;param 1
 	; xor eax, eax
 
 	call search_in_rotor ; search in 3rd rotor
 	add esp, 12
 
+	; PRINTF32 `eax after 3rd rotor: %d\n\x0`, eax
 
 	; search in the 2nd rotor
 	push eax ;param 3
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 78 ; 2nd col of 2nd rotor
+	add eax, 52 ; 2nd col of 2nd rotor
 	push eax;param 2
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 52 ; 1st col of 1st rotor
+	add eax, 78 ; 1st col of 1st rotor
 	push eax ;param 1
 	; xor eax, eax
 
@@ -400,11 +412,12 @@ no_rotate_rot_1:
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 26 ;2nd col of 1st rotor
+	add eax, 0 ;2nd col of 1st rotor
 	push eax ;param 2
 	; xor eax, eax
 
 	mov eax, edx ; 1st col of 1st rotor
+	add eax, 26
 	push eax ;param 1
 	; xor eax, eax
 
@@ -417,12 +430,12 @@ no_rotate_rot_1:
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 182 ; 2nd col of reflector
+	add eax, 156 ; 2nd col of reflector
 	push eax ;param 2
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 156 ; 1st col of reflector
+	add eax, 182 ; 1st col of reflector
 	push eax ; param 1
 	; xor eax, eax
 
@@ -435,11 +448,12 @@ no_rotate_rot_1:
 	; xor eax, eax
 
 	mov eax, edx
+	add eax, 26
 	push eax ;2nd col of 1st rotor ; param 2
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 26 ; 1st col of 1st rotor
+	add eax, 0 ; 1st col of 1st rotor
 	push eax ; param  1
 	; xor eax, eax
 
@@ -452,12 +466,12 @@ no_rotate_rot_1:
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 52 ; 2nd col of 2nd rotor
+	add eax, 78 ; 2nd col of 2nd rotor
 	push eax ;param 2
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 78 ; 1st col of 1st rotor
+	add eax, 52 ; 1st col of 1st rotor
 	push eax ;param 1
 	; xor eax, eax
 
@@ -470,12 +484,12 @@ no_rotate_rot_1:
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 104 ; 2nd col of 3rd rotor
+	add eax, 130 ; 2nd col of 3rd rotor
 	push eax ;param 2
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 130 ; 1st col of 3rd rotor
+	add eax, 104 ; 1st col of 3rd rotor
 	push eax ; param 1
 	; xor eax, eax
 
@@ -488,28 +502,30 @@ no_rotate_rot_1:
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 208 ; 2nd col of plugboard
+	add eax, 234 ; 2nd col of plugboard
 	push eax ;param 2
 	; xor eax, eax
 
 	mov eax, edx
-	add eax, 234 ; 1st col of plugboard
+	add eax, 208 ; 1st col of plugboard
 	push eax ; param 1
 	; xor eax, eax
 
 	call search_in_rotor ; search back in the plugboard
 	add esp, 12	
 
-	add eax, 60
-	; PRINTF32 `Final letter %s\n\x0`, eax
+	; PRINTF32 `final eax: %d\n\x0`, eax
+
+	add eax, 65
+	; PRINTF32 `Final letter %c\n\x0`, eax
 
 	mov byte [edi + ecx], al
 	inc ecx
 	mov [cnt], ecx
 	mov eax, [len_plain]
-	sub eax, ecx
 
-	jne iter_plain
+	sub eax, ecx
+	jnz iter_plain
 
 	mov byte [edi + ecx], 0
 

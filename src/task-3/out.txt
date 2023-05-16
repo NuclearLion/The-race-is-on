@@ -1,0 +1,2799 @@
+--------------TASK 3--------------
+TEST 0..................PASSED: 2.50p
+TEST 1..................PASSED: 2.50p
+EAX start index: 4
+eax after plug board: 4
+eax after 3rd rotor: 24
+final eax: 8
+Final letter I
+EAX start index: 13
+eax after plug board: 13
+eax after 3rd rotor: 3
+final eax: 7
+Final letter H
+EAX start index: 8
+eax after plug board: 8
+eax after 3rd rotor: 25
+final eax: 16
+Final letter Q
+EAX start index: 6
+eax after plug board: 10
+eax after 3rd rotor: 12
+final eax: 1
+Final letter B
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 25
+final eax: 13
+Final letter N
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 15
+final eax: 14
+Final letter O
+TEST 2..................FAILED: 0.00p
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 8
+final eax: 20
+Final letter U
+EAX start index: 16
+eax after plug board: 16
+eax after 3rd rotor: 25
+final eax: 18
+Final letter S
+EAX start index: 20
+eax after plug board: 20
+eax after 3rd rotor: 11
+final eax: 25
+Final letter Z
+EAX start index: 13
+eax after plug board: 13
+eax after 3rd rotor: 7
+final eax: 23
+Final letter X
+EAX start index: 11
+eax after plug board: 11
+eax after 3rd rotor: 21
+final eax: 20
+Final letter U
+EAX start index: 9
+eax after plug board: 9
+eax after 3rd rotor: 4
+final eax: 1
+Final letter B
+EAX start index: 13
+eax after plug board: 13
+eax after 3rd rotor: 24
+final eax: 3
+Final letter D
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 20
+final eax: 11
+Final letter L
+EAX start index: 24
+eax after plug board: 24
+eax after 3rd rotor: 23
+final eax: 20
+Final letter U
+EAX start index: 23
+eax after plug board: 14
+eax after 3rd rotor: 19
+final eax: 15
+Final letter P
+EAX start index: 15
+eax after plug board: 15
+eax after 3rd rotor: 17
+final eax: 13
+Final letter N
+EAX start index: 19
+eax after plug board: 19
+eax after 3rd rotor: 6
+final eax: 11
+Final letter L
+EAX start index: 21
+eax after plug board: 21
+eax after 3rd rotor: 25
+final eax: 16
+Final letter Q
+EAX start index: 16
+eax after plug board: 16
+eax after 3rd rotor: 6
+final eax: 15
+Final letter P
+EAX start index: 4
+eax after plug board: 4
+eax after 3rd rotor: 4
+final eax: 6
+Final letter G
+EAX start index: 21
+eax after plug board: 21
+eax after 3rd rotor: 18
+final eax: 19
+Final letter T
+EAX start index: 8
+eax after plug board: 8
+eax after 3rd rotor: 24
+final eax: 3
+Final letter D
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 2
+final eax: 20
+Final letter U
+TEST 3..................FAILED: 0.00p
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 21
+final eax: 6
+Final letter G
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 14
+final eax: 20
+Final letter U
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 9
+final eax: 8
+Final letter I
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 10
+final eax: 19
+Final letter T
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 16
+final eax: 22
+Final letter W
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 19
+final eax: 10
+Final letter K
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 23
+final eax: 20
+Final letter U
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 1
+final eax: 1
+Final letter B
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 22
+final eax: 3
+Final letter D
+EAX start index: 0
+eax after plug board: 17
+eax after 3rd rotor: 17
+final eax: 11
+Final letter L
+TEST 4..................FAILED: 0.00p
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 23
+final eax: 8
+Final letter I
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 20
+final eax: 0
+Final letter A
+EAX start index: 14
+eax after plug board: 23
+eax after 3rd rotor: 13
+final eax: 5
+Final letter F
+EAX start index: 23
+eax after plug board: 14
+eax after 3rd rotor: 24
+final eax: 10
+Final letter K
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 4
+final eax: 16
+Final letter Q
+EAX start index: 16
+eax after plug board: 16
+eax after 3rd rotor: 2
+final eax: 13
+Final letter N
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 17
+final eax: 10
+Final letter K
+EAX start index: 16
+eax after plug board: 16
+eax after 3rd rotor: 3
+final eax: 24
+Final letter Y
+EAX start index: 15
+eax after plug board: 15
+eax after 3rd rotor: 2
+final eax: 16
+Final letter Q
+EAX start index: 9
+eax after plug board: 9
+eax after 3rd rotor: 14
+final eax: 16
+Final letter Q
+EAX start index: 10
+eax after plug board: 6
+eax after 3rd rotor: 12
+final eax: 9
+Final letter J
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 25
+final eax: 17
+Final letter R
+EAX start index: 2
+eax after plug board: 2
+eax after 3rd rotor: 1
+final eax: 20
+Final letter U
+EAX start index: 23
+eax after plug board: 14
+eax after 3rd rotor: 11
+final eax: 9
+Final letter J
+EAX start index: 20
+eax after plug board: 20
+eax after 3rd rotor: 11
+final eax: 1
+Final letter B
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 9
+final eax: 2
+Final letter C
+EAX start index: 8
+eax after plug board: 8
+eax after 3rd rotor: 10
+final eax: 16
+Final letter Q
+EAX start index: 21
+eax after plug board: 21
+eax after 3rd rotor: 13
+final eax: 1
+Final letter B
+EAX start index: 23
+eax after plug board: 14
+eax after 3rd rotor: 13
+final eax: 9
+Final letter J
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 15
+final eax: 4
+Final letter E
+EAX start index: 13
+eax after plug board: 13
+eax after 3rd rotor: 8
+final eax: 19
+Final letter T
+EAX start index: 10
+eax after plug board: 6
+eax after 3rd rotor: 3
+final eax: 12
+Final letter M
+EAX start index: 6
+eax after plug board: 10
+eax after 3rd rotor: 9
+final eax: 5
+Final letter F
+EAX start index: 13
+eax after plug board: 13
+eax after 3rd rotor: 17
+final eax: 7
+Final letter H
+EAX start index: 24
+eax after plug board: 24
+eax after 3rd rotor: 18
+final eax: 13
+Final letter N
+EAX start index: 23
+eax after plug board: 14
+eax after 3rd rotor: 7
+final eax: 8
+Final letter I
+EAX start index: 14
+eax after plug board: 23
+eax after 3rd rotor: 10
+final eax: 5
+Final letter F
+EAX start index: 25
+eax after plug board: 25
+eax after 3rd rotor: 10
+final eax: 18
+Final letter S
+TEST 5..................FAILED: 0.00p
+EAX start index: 6
+eax after plug board: 6
+eax after 3rd rotor: 8
+final eax: 14
+Final letter O
+EAX start index: 3
+eax after plug board: 2
+eax after 3rd rotor: 19
+final eax: 11
+Final letter L
+EAX start index: 4
+eax after plug board: 5
+eax after 3rd rotor: 21
+final eax: 5
+Final letter F
+EAX start index: 22
+eax after plug board: 22
+eax after 3rd rotor: 22
+final eax: 16
+Final letter Q
+EAX start index: 21
+eax after plug board: 21
+eax after 3rd rotor: 21
+final eax: 24
+Final letter Y
+EAX start index: 0
+eax after plug board: 1
+eax after 3rd rotor: 3
+final eax: 15
+Final letter P
+EAX start index: 21
+eax after plug board: 21
+eax after 3rd rotor: 13
+final eax: 16
+Final letter Q
+EAX start index: 23
+eax after plug board: 23
+eax after 3rd rotor: 2
+final eax: 3
+Final letter D
+EAX start index: 25
+eax after plug board: 25
+eax after 3rd rotor: 15
+final eax: 9
+Final letter J
+EAX start index: 13
+eax after plug board: 13
+eax after 3rd rotor: 23
+final eax: 21
+Final letter V
+EAX start index: 22
+eax after plug board: 22
+eax after 3rd rotor: 24
+final eax: 25
+Final letter Z
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 9
+final eax: 23
+Final letter X
+EAX start index: 6
+eax after plug board: 6
+eax after 3rd rotor: 18
+final eax: 19
+Final letter T
+EAX start index: 8
+eax after plug board: 8
+eax after 3rd rotor: 3
+final eax: 20
+Final letter U
+EAX start index: 5
+eax after plug board: 4
+eax after 3rd rotor: 16
+final eax: 14
+Final letter O
+EAX start index: 3
+eax after plug board: 2
+eax after 3rd rotor: 25
+final eax: 21
+Final letter V
+EAX start index: 1
+eax after plug board: 0
+eax after 3rd rotor: 11
+final eax: 2
+Final letter C
+EAX start index: 11
+eax after plug board: 11
+eax after 3rd rotor: 19
+final eax: 10
+Final letter K
+EAX start index: 1
+eax after plug board: 0
+eax after 3rd rotor: 12
+final eax: 2
+Final letter C
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 18
+final eax: 0
+Final letter A
+EAX start index: 10
+eax after plug board: 10
+eax after 3rd rotor: 15
+final eax: 16
+Final letter Q
+EAX start index: 8
+eax after plug board: 8
+eax after 3rd rotor: 25
+final eax: 0
+Final letter A
+EAX start index: 3
+eax after plug board: 2
+eax after 3rd rotor: 11
+final eax: 9
+Final letter J
+EAX start index: 8
+eax after plug board: 8
+eax after 3rd rotor: 24
+final eax: 7
+Final letter H
+EAX start index: 11
+eax after plug board: 11
+eax after 3rd rotor: 24
+final eax: 5
+Final letter F
+EAX start index: 5
+eax after plug board: 4
+eax after 3rd rotor: 21
+final eax: 11
+Final letter L
+EAX start index: 8
+eax after plug board: 8
+eax after 3rd rotor: 3
+final eax: 3
+Final letter D
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 2
+final eax: 3
+Final letter D
+TEST 6..................FAILED: 0.00p
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 22
+final eax: 2
+Final letter C
+EAX start index: 2
+eax after plug board: 2
+eax after 3rd rotor: 13
+final eax: 23
+Final letter X
+EAX start index: 2
+eax after plug board: 2
+eax after 3rd rotor: 25
+final eax: 7
+Final letter H
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 19
+final eax: 15
+Final letter P
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 12
+final eax: 21
+Final letter V
+EAX start index: 22
+eax after plug board: 22
+eax after 3rd rotor: 0
+final eax: 13
+Final letter N
+EAX start index: 5
+eax after plug board: 5
+eax after 3rd rotor: 14
+final eax: 19
+Final letter T
+EAX start index: 24
+eax after plug board: 24
+eax after 3rd rotor: 10
+final eax: 4
+Final letter E
+EAX start index: 0
+eax after plug board: 0
+eax after 3rd rotor: 21
+final eax: 25
+Final letter Z
+EAX start index: 19
+eax after plug board: 19
+eax after 3rd rotor: 17
+final eax: 9
+Final letter J
+EAX start index: 6
+eax after plug board: 6
+eax after 3rd rotor: 23
+final eax: 25
+Final letter Z
+EAX start index: 11
+eax after plug board: 11
+eax after 3rd rotor: 24
+final eax: 16
+Final letter Q
+EAX start index: 23
+eax after plug board: 23
+eax after 3rd rotor: 7
+final eax: 4
+Final letter E
+EAX start index: 19
+eax after plug board: 19
+eax after 3rd rotor: 15
+final eax: 0
+Final letter A
+EAX start index: 20
+eax after plug board: 20
+eax after 3rd rotor: 15
+final eax: 11
+Final letter L
+EAX start index: 21
+eax after plug board: 21
+eax after 3rd rotor: 15
+final eax: 13
+Final letter N
+EAX start index: 3
+eax after plug board: 3
+eax after 3rd rotor: 5
+final eax: 6
+Final letter G
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 0
+final eax: 20
+Final letter U
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 10
+final eax: 9
+Final letter J
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 6
+Final letter G
+EAX start index: 21
+eax after plug board: 21
+eax after 3rd rotor: 3
+final eax: 17
+Final letter R
+EAX start index: 0
+eax after plug board: 0
+eax after 3rd rotor: 21
+final eax: 23
+Final letter X
+EAX start index: 10
+eax after plug board: 10
+eax after 3rd rotor: 6
+final eax: 13
+Final letter N
+EAX start index: 15
+eax after plug board: 15
+eax after 3rd rotor: 15
+final eax: 19
+Final letter T
+EAX start index: 5
+eax after plug board: 5
+eax after 3rd rotor: 16
+final eax: 10
+Final letter K
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 25
+final eax: 16
+Final letter Q
+EAX start index: 24
+eax after plug board: 24
+eax after 3rd rotor: 11
+final eax: 11
+Final letter L
+EAX start index: 13
+eax after plug board: 13
+eax after 3rd rotor: 5
+final eax: 4
+Final letter E
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 4
+final eax: 11
+Final letter L
+EAX start index: 6
+eax after plug board: 6
+eax after 3rd rotor: 16
+final eax: 15
+Final letter P
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 3
+final eax: 23
+Final letter X
+EAX start index: 19
+eax after plug board: 19
+eax after 3rd rotor: 6
+final eax: 1
+Final letter B
+EAX start index: 22
+eax after plug board: 22
+eax after 3rd rotor: 20
+final eax: 25
+Final letter Z
+EAX start index: 10
+eax after plug board: 10
+eax after 3rd rotor: 15
+final eax: 24
+Final letter Y
+EAX start index: 5
+eax after plug board: 5
+eax after 3rd rotor: 16
+final eax: 15
+Final letter P
+EAX start index: 9
+eax after plug board: 9
+eax after 3rd rotor: 25
+final eax: 7
+Final letter H
+EAX start index: 8
+eax after plug board: 8
+eax after 3rd rotor: 24
+final eax: 12
+Final letter M
+TEST 7..................FAILED: 0.00p
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 8
+final eax: 21
+Final letter V
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 6
+final eax: 5
+Final letter F
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 1
+final eax: 1
+Final letter B
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 25
+final eax: 3
+Final letter D
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 8
+final eax: 7
+Final letter H
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 12
+final eax: 7
+Final letter H
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 19
+final eax: 18
+Final letter S
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 22
+final eax: 11
+Final letter L
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 24
+final eax: 3
+Final letter D
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 14
+final eax: 8
+Final letter I
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 1
+final eax: 14
+Final letter O
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 23
+final eax: 21
+Final letter V
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 12
+final eax: 21
+Final letter V
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 0
+final eax: 15
+Final letter P
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 8
+final eax: 13
+Final letter N
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 16
+final eax: 18
+Final letter S
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 7
+final eax: 12
+Final letter M
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 24
+final eax: 19
+Final letter T
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 4
+final eax: 17
+Final letter R
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 23
+final eax: 5
+Final letter F
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 24
+Final letter Y
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 9
+final eax: 5
+Final letter F
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 8
+final eax: 8
+Final letter I
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 22
+final eax: 1
+Final letter B
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 9
+final eax: 14
+Final letter O
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 16
+final eax: 16
+Final letter Q
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 17
+final eax: 22
+Final letter W
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 17
+final eax: 8
+Final letter I
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 13
+final eax: 23
+Final letter X
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 12
+final eax: 6
+Final letter G
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 1
+final eax: 11
+Final letter L
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 25
+final eax: 4
+Final letter E
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 16
+final eax: 18
+Final letter S
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 1
+final eax: 8
+Final letter I
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 16
+final eax: 15
+Final letter P
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 10
+final eax: 17
+Final letter R
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 12
+final eax: 20
+Final letter U
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 18
+final eax: 10
+Final letter K
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 5
+final eax: 12
+Final letter M
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 4
+final eax: 6
+Final letter G
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 14
+final eax: 20
+Final letter U
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 24
+final eax: 13
+Final letter N
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 8
+final eax: 1
+Final letter B
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 0
+Final letter A
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 2
+final eax: 25
+Final letter Z
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 21
+final eax: 12
+Final letter M
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 3
+final eax: 17
+Final letter R
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 18
+final eax: 8
+Final letter I
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 1
+final eax: 4
+Final letter E
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 14
+final eax: 14
+Final letter O
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 8
+final eax: 22
+Final letter W
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 12
+final eax: 0
+Final letter A
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 25
+final eax: 4
+Final letter E
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 2
+final eax: 5
+Final letter F
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 24
+final eax: 22
+Final letter W
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 13
+final eax: 18
+Final letter S
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 5
+final eax: 2
+Final letter C
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 18
+final eax: 8
+Final letter I
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 5
+final eax: 7
+Final letter H
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 12
+final eax: 2
+Final letter C
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 12
+final eax: 25
+Final letter Z
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 10
+final eax: 14
+Final letter O
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 22
+final eax: 15
+Final letter P
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 25
+final eax: 17
+Final letter R
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 18
+final eax: 2
+Final letter C
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 2
+final eax: 25
+Final letter Z
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 17
+final eax: 13
+Final letter N
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 11
+final eax: 5
+Final letter F
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 14
+final eax: 2
+Final letter C
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 11
+Final letter L
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 3
+final eax: 22
+Final letter W
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 0
+final eax: 5
+Final letter F
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 16
+final eax: 16
+Final letter Q
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 17
+final eax: 22
+Final letter W
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 12
+final eax: 18
+Final letter S
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 19
+final eax: 19
+Final letter T
+EAX start index: 2
+eax after plug board: 13
+eax after 3rd rotor: 24
+final eax: 5
+Final letter F
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 18
+final eax: 11
+Final letter L
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 5
+final eax: 16
+Final letter Q
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 11
+final eax: 5
+Final letter F
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 16
+final eax: 9
+Final letter J
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 5
+final eax: 1
+Final letter B
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 21
+final eax: 8
+Final letter I
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 4
+final eax: 20
+Final letter U
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 4
+final eax: 12
+Final letter M
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 1
+final eax: 9
+Final letter J
+TEST 8..................FAILED: 0.00p
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 8
+final eax: 21
+Final letter V
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 6
+final eax: 5
+Final letter F
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 1
+final eax: 1
+Final letter B
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 25
+final eax: 3
+Final letter D
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 8
+final eax: 7
+Final letter H
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 12
+final eax: 7
+Final letter H
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 19
+final eax: 18
+Final letter S
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 22
+final eax: 11
+Final letter L
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 24
+final eax: 3
+Final letter D
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 14
+final eax: 8
+Final letter I
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 1
+final eax: 14
+Final letter O
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 23
+final eax: 21
+Final letter V
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 12
+final eax: 21
+Final letter V
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 0
+final eax: 15
+Final letter P
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 8
+final eax: 13
+Final letter N
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 16
+final eax: 18
+Final letter S
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 7
+final eax: 12
+Final letter M
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 24
+final eax: 19
+Final letter T
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 4
+final eax: 17
+Final letter R
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 23
+final eax: 5
+Final letter F
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 24
+Final letter Y
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 9
+final eax: 5
+Final letter F
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 8
+final eax: 8
+Final letter I
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 22
+final eax: 1
+Final letter B
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 9
+final eax: 14
+Final letter O
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 16
+final eax: 16
+Final letter Q
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 17
+final eax: 22
+Final letter W
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 17
+final eax: 8
+Final letter I
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 13
+final eax: 23
+Final letter X
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 12
+final eax: 6
+Final letter G
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 1
+final eax: 11
+Final letter L
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 25
+final eax: 4
+Final letter E
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 16
+final eax: 18
+Final letter S
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 1
+final eax: 8
+Final letter I
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 16
+final eax: 15
+Final letter P
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 10
+final eax: 17
+Final letter R
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 12
+final eax: 20
+Final letter U
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 18
+final eax: 10
+Final letter K
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 5
+final eax: 12
+Final letter M
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 4
+final eax: 6
+Final letter G
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 14
+final eax: 20
+Final letter U
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 24
+final eax: 13
+Final letter N
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 8
+final eax: 1
+Final letter B
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 0
+Final letter A
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 2
+final eax: 25
+Final letter Z
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 21
+final eax: 12
+Final letter M
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 3
+final eax: 17
+Final letter R
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 18
+final eax: 8
+Final letter I
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 1
+final eax: 4
+Final letter E
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 14
+final eax: 14
+Final letter O
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 8
+final eax: 22
+Final letter W
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 12
+final eax: 0
+Final letter A
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 25
+final eax: 4
+Final letter E
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 2
+final eax: 5
+Final letter F
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 24
+final eax: 22
+Final letter W
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 13
+final eax: 18
+Final letter S
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 5
+final eax: 2
+Final letter C
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 18
+final eax: 8
+Final letter I
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 5
+final eax: 7
+Final letter H
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 12
+final eax: 2
+Final letter C
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 12
+final eax: 25
+Final letter Z
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 10
+final eax: 14
+Final letter O
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 22
+final eax: 15
+Final letter P
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 25
+final eax: 17
+Final letter R
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 18
+final eax: 2
+Final letter C
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 2
+final eax: 25
+Final letter Z
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 17
+final eax: 13
+Final letter N
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 11
+final eax: 5
+Final letter F
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 14
+final eax: 2
+Final letter C
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 11
+Final letter L
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 3
+final eax: 22
+Final letter W
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 0
+final eax: 5
+Final letter F
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 16
+final eax: 16
+Final letter Q
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 17
+final eax: 22
+Final letter W
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 12
+final eax: 18
+Final letter S
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 19
+final eax: 19
+Final letter T
+EAX start index: 2
+eax after plug board: 13
+eax after 3rd rotor: 24
+final eax: 5
+Final letter F
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 18
+final eax: 11
+Final letter L
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 5
+final eax: 16
+Final letter Q
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 11
+final eax: 5
+Final letter F
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 16
+final eax: 9
+Final letter J
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 5
+final eax: 1
+Final letter B
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 21
+final eax: 8
+Final letter I
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 4
+final eax: 20
+Final letter U
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 4
+final eax: 12
+Final letter M
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 1
+final eax: 9
+Final letter J
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 16
+final eax: 0
+Final letter A
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 16
+final eax: 20
+Final letter U
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 7
+final eax: 3
+Final letter D
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 21
+final eax: 23
+Final letter X
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 6
+final eax: 6
+Final letter G
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 7
+final eax: 18
+Final letter S
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 22
+final eax: 12
+Final letter M
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 2
+final eax: 13
+Final letter N
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 7
+final eax: 7
+Final letter H
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 10
+final eax: 14
+Final letter O
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 23
+final eax: 8
+Final letter I
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 5
+final eax: 20
+Final letter U
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 8
+final eax: 12
+Final letter M
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 0
+final eax: 4
+Final letter E
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 18
+final eax: 1
+Final letter B
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 12
+final eax: 11
+Final letter L
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 3
+final eax: 22
+Final letter W
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 23
+final eax: 15
+Final letter P
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 14
+final eax: 5
+Final letter F
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 12
+final eax: 16
+Final letter Q
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 13
+final eax: 12
+Final letter M
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 4
+final eax: 0
+Final letter A
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 3
+final eax: 0
+Final letter A
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 24
+final eax: 17
+Final letter R
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 19
+final eax: 9
+Final letter J
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 15
+final eax: 11
+Final letter L
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 12
+final eax: 13
+Final letter N
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 10
+final eax: 2
+Final letter C
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 12
+final eax: 17
+Final letter R
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 11
+final eax: 24
+Final letter Y
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 23
+final eax: 15
+Final letter P
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 20
+final eax: 1
+Final letter B
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 0
+final eax: 12
+Final letter M
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 9
+final eax: 3
+Final letter D
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 12
+final eax: 4
+Final letter E
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 12
+final eax: 3
+Final letter D
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 22
+final eax: 16
+Final letter Q
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 24
+final eax: 7
+Final letter H
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 0
+final eax: 12
+Final letter M
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 25
+final eax: 19
+Final letter T
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 10
+final eax: 21
+Final letter V
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 24
+final eax: 5
+Final letter F
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 4
+final eax: 17
+Final letter R
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 25
+final eax: 9
+Final letter J
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 16
+final eax: 17
+Final letter R
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 11
+final eax: 4
+Final letter E
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 25
+final eax: 6
+Final letter G
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 18
+final eax: 3
+Final letter D
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 23
+final eax: 2
+Final letter C
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 10
+final eax: 8
+Final letter I
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 17
+final eax: 17
+Final letter R
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 8
+final eax: 21
+Final letter V
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 2
+final eax: 17
+Final letter R
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 8
+final eax: 21
+Final letter V
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 20
+final eax: 9
+Final letter J
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 2
+final eax: 11
+Final letter L
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 14
+final eax: 1
+Final letter B
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 14
+final eax: 16
+Final letter Q
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 1
+final eax: 18
+Final letter S
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 14
+final eax: 5
+Final letter F
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 0
+final eax: 6
+Final letter G
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 12
+final eax: 11
+Final letter L
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 5
+final eax: 11
+Final letter L
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 15
+final eax: 3
+Final letter D
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 13
+final eax: 16
+Final letter Q
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 1
+final eax: 7
+Final letter H
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 13
+final eax: 14
+Final letter O
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 7
+final eax: 22
+Final letter W
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 9
+final eax: 18
+Final letter S
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 25
+final eax: 7
+Final letter H
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 11
+final eax: 14
+Final letter O
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 2
+final eax: 0
+Final letter A
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 6
+final eax: 12
+Final letter M
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 15
+final eax: 22
+Final letter W
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 20
+final eax: 4
+Final letter E
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 8
+final eax: 14
+Final letter O
+EAX start index: 2
+eax after plug board: 13
+eax after 3rd rotor: 8
+final eax: 22
+Final letter W
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 13
+final eax: 8
+Final letter I
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 1
+final eax: 4
+Final letter E
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 9
+final eax: 16
+Final letter Q
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 9
+final eax: 10
+Final letter K
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 13
+final eax: 17
+Final letter R
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 24
+final eax: 2
+Final letter C
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 13
+final eax: 4
+Final letter E
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 20
+final eax: 24
+Final letter Y
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 9
+final eax: 21
+Final letter V
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 12
+final eax: 15
+Final letter P
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 19
+final eax: 14
+Final letter O
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 2
+final eax: 20
+Final letter U
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 4
+final eax: 3
+Final letter D
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 25
+final eax: 16
+Final letter Q
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 21
+final eax: 7
+Final letter H
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 12
+final eax: 18
+Final letter S
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 23
+final eax: 0
+Final letter A
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 3
+final eax: 22
+Final letter W
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 6
+final eax: 0
+Final letter A
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 22
+final eax: 17
+Final letter R
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 1
+final eax: 10
+Final letter K
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 4
+final eax: 23
+Final letter X
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 8
+final eax: 8
+Final letter I
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 8
+final eax: 2
+Final letter C
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 21
+final eax: 17
+Final letter R
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 25
+final eax: 21
+Final letter V
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 7
+final eax: 15
+Final letter P
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 4
+final eax: 17
+Final letter R
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 12
+final eax: 3
+Final letter D
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 12
+final eax: 7
+Final letter H
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 14
+final eax: 10
+Final letter K
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 13
+final eax: 17
+Final letter R
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 4
+final eax: 11
+Final letter L
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 22
+final eax: 8
+Final letter I
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 25
+final eax: 25
+Final letter Z
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 0
+final eax: 9
+Final letter J
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 12
+final eax: 2
+Final letter C
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 22
+final eax: 0
+Final letter A
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 21
+final eax: 2
+Final letter C
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 6
+final eax: 4
+Final letter E
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 4
+final eax: 23
+Final letter X
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 16
+final eax: 25
+Final letter Z
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 5
+final eax: 6
+Final letter G
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 8
+final eax: 4
+Final letter E
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 18
+final eax: 25
+Final letter Z
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 12
+final eax: 11
+Final letter L
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 19
+final eax: 24
+Final letter Y
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 14
+final eax: 10
+Final letter K
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 13
+final eax: 3
+Final letter D
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 19
+final eax: 7
+Final letter H
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 6
+final eax: 5
+Final letter F
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 0
+final eax: 4
+Final letter E
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 21
+final eax: 23
+Final letter X
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 5
+final eax: 18
+Final letter S
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 9
+final eax: 21
+Final letter V
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 21
+final eax: 10
+Final letter K
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 0
+final eax: 7
+Final letter H
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 19
+final eax: 3
+Final letter D
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 9
+final eax: 14
+Final letter O
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 13
+final eax: 24
+Final letter Y
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 7
+final eax: 1
+Final letter B
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 18
+final eax: 8
+Final letter I
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 3
+final eax: 3
+Final letter D
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 15
+final eax: 7
+Final letter H
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 2
+final eax: 3
+Final letter D
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 10
+final eax: 11
+Final letter L
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 10
+final eax: 17
+Final letter R
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 0
+final eax: 22
+Final letter W
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 20
+final eax: 0
+Final letter A
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 15
+final eax: 9
+Final letter J
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 18
+final eax: 0
+Final letter A
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 1
+final eax: 20
+Final letter U
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 23
+final eax: 0
+Final letter A
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 23
+final eax: 19
+Final letter T
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 11
+final eax: 12
+Final letter M
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 22
+final eax: 8
+Final letter I
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 2
+final eax: 10
+Final letter K
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 19
+final eax: 20
+Final letter U
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 21
+final eax: 20
+Final letter U
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 7
+final eax: 2
+Final letter C
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 8
+final eax: 13
+Final letter N
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 14
+final eax: 6
+Final letter G
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 8
+final eax: 20
+Final letter U
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 16
+final eax: 15
+Final letter P
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 8
+final eax: 17
+Final letter R
+EAX start index: 2
+eax after plug board: 13
+eax after 3rd rotor: 24
+final eax: 15
+Final letter P
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 1
+final eax: 7
+Final letter H
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 10
+final eax: 12
+Final letter M
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 2
+final eax: 25
+Final letter Z
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 11
+final eax: 19
+Final letter T
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 9
+final eax: 13
+Final letter N
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 14
+final eax: 8
+Final letter I
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 9
+final eax: 25
+Final letter Z
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 2
+final eax: 2
+Final letter C
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 5
+final eax: 2
+Final letter C
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 8
+final eax: 9
+Final letter J
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 9
+final eax: 6
+Final letter G
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 16
+final eax: 18
+Final letter S
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 0
+final eax: 25
+Final letter Z
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 1
+final eax: 15
+Final letter P
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 10
+final eax: 2
+Final letter C
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 20
+final eax: 10
+Final letter K
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 11
+final eax: 22
+Final letter W
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 25
+final eax: 9
+Final letter J
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 2
+final eax: 18
+Final letter S
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 6
+final eax: 12
+Final letter M
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 23
+final eax: 10
+Final letter K
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 13
+final eax: 4
+Final letter E
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 4
+final eax: 17
+Final letter R
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 6
+final eax: 21
+Final letter V
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 17
+final eax: 20
+Final letter U
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 21
+final eax: 11
+Final letter L
+EAX start index: 12
+eax after plug board: 12
+eax after 3rd rotor: 23
+final eax: 0
+Final letter A
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 2
+final eax: 5
+Final letter F
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 20
+final eax: 17
+Final letter R
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 22
+final eax: 22
+Final letter W
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 17
+final eax: 18
+Final letter S
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 16
+final eax: 6
+Final letter G
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 25
+final eax: 17
+Final letter R
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 12
+final eax: 15
+Final letter P
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 15
+final eax: 16
+Final letter Q
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 15
+final eax: 0
+Final letter A
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 18
+final eax: 17
+Final letter R
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 12
+final eax: 25
+Final letter Z
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 11
+final eax: 2
+Final letter C
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 2
+final eax: 13
+Final letter N
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 7
+final eax: 25
+Final letter Z
+EAX start index: 11
+eax after plug board: 5
+eax after 3rd rotor: 14
+final eax: 2
+Final letter C
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 1
+final eax: 9
+Final letter J
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 17
+final eax: 24
+Final letter Y
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 13
+final eax: 1
+Final letter B
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 10
+final eax: 7
+Final letter H
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 7
+final eax: 22
+Final letter W
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 3
+final eax: 23
+Final letter X
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 2
+final eax: 5
+Final letter F
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 15
+final eax: 18
+Final letter S
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 2
+final eax: 6
+Final letter G
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 9
+final eax: 17
+Final letter R
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 15
+Final letter P
+EAX start index: 22
+eax after plug board: 23
+eax after 3rd rotor: 5
+final eax: 3
+Final letter D
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 2
+final eax: 12
+Final letter M
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 17
+final eax: 9
+Final letter J
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 22
+final eax: 6
+Final letter G
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 15
+final eax: 16
+Final letter Q
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 19
+final eax: 12
+Final letter M
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 9
+final eax: 22
+Final letter W
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 17
+final eax: 10
+Final letter K
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 0
+final eax: 8
+Final letter I
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 17
+final eax: 23
+Final letter X
+EAX start index: 13
+eax after plug board: 2
+eax after 3rd rotor: 25
+final eax: 12
+Final letter M
+EAX start index: 15
+eax after plug board: 20
+eax after 3rd rotor: 10
+final eax: 12
+Final letter M
+EAX start index: 18
+eax after plug board: 18
+eax after 3rd rotor: 5
+final eax: 15
+Final letter P
+EAX start index: 4
+eax after plug board: 19
+eax after 3rd rotor: 6
+final eax: 2
+Final letter C
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 10
+final eax: 23
+Final letter X
+EAX start index: 25
+eax after plug board: 10
+eax after 3rd rotor: 15
+final eax: 12
+Final letter M
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 15
+final eax: 21
+Final letter V
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 13
+final eax: 7
+Final letter H
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 23
+final eax: 17
+Final letter R
+EAX start index: 10
+eax after plug board: 25
+eax after 3rd rotor: 19
+final eax: 11
+Final letter L
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 0
+final eax: 17
+Final letter R
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 1
+final eax: 9
+Final letter J
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 18
+final eax: 1
+Final letter B
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 12
+final eax: 10
+Final letter K
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 22
+final eax: 8
+Final letter I
+EAX start index: 1
+eax after plug board: 1
+eax after 3rd rotor: 17
+final eax: 17
+Final letter R
+EAX start index: 9
+eax after plug board: 21
+eax after 3rd rotor: 6
+final eax: 1
+Final letter B
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 3
+final eax: 7
+Final letter H
+EAX start index: 24
+eax after plug board: 16
+eax after 3rd rotor: 10
+final eax: 21
+Final letter V
+EAX start index: 8
+eax after plug board: 6
+eax after 3rd rotor: 10
+final eax: 19
+Final letter T
+EAX start index: 23
+eax after plug board: 22
+eax after 3rd rotor: 12
+final eax: 15
+Final letter P
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 16
+final eax: 23
+Final letter X
+EAX start index: 2
+eax after plug board: 13
+eax after 3rd rotor: 22
+final eax: 20
+Final letter U
+EAX start index: 6
+eax after plug board: 8
+eax after 3rd rotor: 16
+final eax: 24
+Final letter Y
+EAX start index: 14
+eax after plug board: 14
+eax after 3rd rotor: 6
+final eax: 24
+Final letter Y
+EAX start index: 3
+eax after plug board: 0
+eax after 3rd rotor: 4
+final eax: 4
+Final letter E
+EAX start index: 7
+eax after plug board: 7
+eax after 3rd rotor: 17
+final eax: 0
+Final letter A
+EAX start index: 20
+eax after plug board: 15
+eax after 3rd rotor: 5
+final eax: 0
+Final letter A
+EAX start index: 16
+eax after plug board: 24
+eax after 3rd rotor: 22
+final eax: 8
+Final letter I
+EAX start index: 17
+eax after plug board: 17
+eax after 3rd rotor: 4
+final eax: 16
+Final letter Q
+EAX start index: 19
+eax after plug board: 4
+eax after 3rd rotor: 24
+final eax: 5
+Final letter F
+EAX start index: 5
+eax after plug board: 11
+eax after 3rd rotor: 1
+final eax: 4
+Final letter E
+TEST 9..................FAILED: 0.00p
+
+TASK 3 SCORE: 5.00 / 25.00
+
