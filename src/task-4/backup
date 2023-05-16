@@ -11,3 +11,22 @@
 	; mul dx ; ax = (M - 1 - x) * N
 
 	; add eax, ebx ; case index in matrix
+
+
+
+
+	mov edi, eax
+
+	push ecx
+	xor ecx, ecx
+	mov ecx, [len_plain]
+	PRINTF32 `ECX: %d\n\x0`, ecx
+
+loop_all_plain:
+	xor eax, eax
+	movzx eax, byte [edi]
+
+	PRINTF32 `letter in plain: %c\n\x0`, eax
+
+	inc edi
+	loop loop_all_plain

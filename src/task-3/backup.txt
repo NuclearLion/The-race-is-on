@@ -73,3 +73,11 @@ loop_elements_after_x: ; values from index 0 to index x (without x)
 ; 	PRINTF32 `\nPENIISSSSS\n\n\n\x0`, edx
 
 	; ----debug----
+
+
+
+
+
+
+
+
