@@ -201,6 +201,160 @@ end:
     ret
     ;; DO NOT MODIFY
 
+; search the given index
+; get the value/letter at the index
+; search on the 2nd col the letter found in the first
+; return the index from the 2nd
+search_in_rotor:
+	push ebp
+	mov ebp, esp
+	push eax
+	push ebx
+	; push ecx
+	push edx
+	push esi
+	push edi
+
+	mov eax, [ebp + 8] ; given index
+	mov esi, [ebp + 12] ; 1st col
+	mov edi, [ebp + 16] ; 2nd col
+	; mov ecx, [ebp + 20] ; return index
+
+	mov edx, [esi + eax] ; get in edx the letter at given index
+
+	xor ecx, ecx
+	cmp [esi], edx
+	je no_iter_col2
+iter_col2:
+	inc ecx
+	inc esi
+	cmp [esi], edx
+	jne iter_col2
+no_iter_col2:
+
+
+
+	pop eax
+	pop ebx
+	; pop ecx
+	pop edx
+	pop esi
+	pop edi
+	leave
+	ret
+
+apply_enigma:
+	push ebp
+	mov ebp, esp
+	push eax
+	push ebx
+	push ecx
+	push edx
+	push esi
+	; push edi
+
+	mov eax, [ebp + 8] ; the letter
+	mov ebx, [ebp + 12] ; key
+    mov ecx, [ebp + 16] ; notches
+    mov edx, [ebp + 20] ; config (address of first element in matrix)
+    mov edi, [ebp + 24] ; enc
+
+	push [edx + 234] ; 2st col of 
+	push [edx + 208] ; 1st col
+	push eax
+	call search_in_rotor ;search in plugboard
+
+	add esp, 12
+	mov eax, ecx ; get new index
+	xor ecx, ecx
+
+	push [edx + 130]
+	push [edx + 104]
+	push eax
+	call search_in_rotor ;search in 3rd rotor
+
+	add esp, 12
+	mov eax, ecx ; get new index
+	xor ecx, ecx
+
+	push [edx + 78]
+	push [edx + 52]
+	push eax
+	call search_in_rotor ;search in 2nd rotor
+
+	add esp, 12
+	mov eax, ecx
+	xor ecx, ecx
+
+	push [edx + 26]
+	push [edx]
+	push eax
+	call search_in_rotor ;search in 1st rotor
+
+	add esp, 12
+	mov eax, ecx
+	xor ecx, ecx
+
+	push [edx + 182]
+	push [edx + 156]
+	push eax
+	call search_in_rotor ;search in reflector
+
+	add esp, 12
+	mov eax, ecx
+	xor ecx, ecx
+
+	push [edx]
+	push [edx + 26]
+	push eax
+	call search_in_rotor ;search back in 1st rotor
+
+	add esp, 12
+	mov eax, ecx
+	xor ecx, ecx
+
+	push [edx + 52]
+	push [edx + 78]
+	push eax
+	call search_in_rotor ;search back in 2st rotor
+
+	add esp, 12
+	mov eax, ecx
+	xor ecx, ecx
+
+
+	push [edx + 104]
+	push [edx + 130]
+	push eax
+	call search_in_rotor ;search back in 3st rotor
+
+	add esp, 12
+	mov eax, ecx
+	xor ecx, ecx
+
+	
+	push [edx + 156]
+	push [edx + 182]
+	push eax
+	call search_in_rotor ;search back in plugboard
+
+	add esp, 12
+	mov eax, ecx
+	xor ecx, ecx
+
+
+	pop eax
+	pop ebx
+	pop ecx
+	pop edx
+	pop esi
+	; pop edi
+
+	popa
+	leave
+	ret
+
+
 ; void enigma(char *plain, char key[3], char notches[3], char config[10][26], char *enc);
 enigma:
     ;; DO NOT MODIFY
