@@ -1,12 +1,8 @@
-%include "../include/io.mac"
-
-    ;;
-    ;;   TODO: Declare 'avg' struct to match its C counterpart
-    ;;
+; Copyrigth (c) 2023, <Dan-Dominic Staicu>
 
 struc avg
-	.quo resw 1
-	.remain resw 1
+	.quo resw 1 ; quotient
+	.remain resw 1 ; remainder
 endstruc
 
 struc proc
@@ -22,7 +18,6 @@ section .data
 
 section .text
     global run_procs
-	extern printf
 
 run_procs:
     ;; DO NOT MODIFY
@@ -48,41 +43,27 @@ clean_results:
    
     ;; Your code starts here
 
-	mov esi, ecx
-	mov edi, eax
-	mov ecx, ebx
+	mov esi, ecx ; processes
+	mov edi, eax ; proc_avg
+	mov ecx, ebx ; length
 
-
-
-loop_procs:
+loop_procs: ; loop through all processes
 	xor eax, eax
 	xor edx, edx
 
 	movzx eax, byte [esi + proc.prio] ; priority of current struc
 	movzx edx, word [esi + proc.time] ; time of current element
 
-	dec eax
+	dec eax ; decrement prio to get index in result array
 
-	; PRINTF32 `proc.prio: %d\n\x0`, eax
-	; PRINTF32 `proc.time: %d\n\x0`, edx
-
-	add dword [prio_result + eax * 4], dword 1 ; inc count of strucs with same prio
-	add dword [time_result + eax * 4], edx
+	add dword [prio_result + eax * 4], dword 1 ; inc cnt strucs with same prio
+	add dword [time_result + eax * 4], edx ; add time to total time
 	
-	add esi, proc_size
+	add esi, proc_size ; next process
 
-	loop loop_procs
+	loop loop_procs ; loop until all processes are done
 
-
-
-;;----print results------
-
-; mov ecx, 5
-
-
-;;----print results------
-
-	mov ecx, 5
+	mov ecx, 5 ; length of result arrays
 
 	xor eax, eax 
 	xor ebx, ebx
@@ -90,35 +71,32 @@ loop_procs:
 	xor edx, edx ; index in result array
 
 set_results:
-	; PRINTF32 `EDX(index): %d\n\x0`, edx
-	push edx
+	push edx ; save index
 
 	xor eax, eax 
 	xor ebx, ebx
 
-	mov eax, dword [time_result + edx * 4]
-	mov ebx, dword [prio_result + edx * 4]
+	mov eax, dword [time_result + edx * 4] ; total time
+	mov ebx, dword [prio_result + edx * 4] ; cnt of strucs with same prio
 
-	xor edx, edx
+	xor edx, edx ; clear edx before div
 
-	cmp ebx, 0
-	je no_div
+	cmp ebx, 0 ; check if no strucs with same prio
+	je no_div ; if so, jump to no_div because of div by 0
 
-	div ebx
+	div ebx ; eax = total time / cnt of strucs with same prio
 
-
-	mov [edi + avg.quo], ax
-	mov [edi + avg.remain], dx
+	mov [edi + avg.quo], ax ; save result
+	mov [edi + avg.remain], dx ; save remainder
 
 next_step:
 	xor edx, edx
+	pop edx ; restore index
+	inc edx ; inc index
 
-	pop edx
-	inc edx
+	add edi, avg_size ; next avg struct
 
-	add edi, avg_size
-
-	loop set_results
+	loop set_results ; loop until all results are set
 	
     ;; Your code ends here
     
@@ -128,10 +106,8 @@ next_step:
     ret
     ;; DO NOT MODIFY
 
-no_div:
-	; PRINTF32 `DIV BY 0\n\x0`
+no_div: ; no strucs with same prio
+	mov [edi + avg.quo], word 0 ; set result to 0
+	mov [edi + avg.remain], word 0 ; set remainder to 0
 
-	mov [edi + avg.quo], word 0
-	mov [edi + avg.remain], word 0
-
-	jmp next_step
+	jmp next_step ; jump back to next step

@@ -1,8 +1,7 @@
-%include "../include/io.mac"
+; Copyrigth (c) 2023, <Dan-Dominic Staicu>
 
 section .text
     global simple
-    extern printf
 
 simple:
     ;; DO NOT MODIFY
@@ -20,15 +19,15 @@ simple:
     ;; Your code starts here
 
 
-string_loop:
-	mov al, [esi]
+string_loop: ; loop for the length of the string
+	mov al, [esi] ; move the letter in al
 
-	add al, dl
+	add al, dl ; add the step to the letter
 
 	; check if the letter in al is smaller than 'Z'
 	cmp al, 90
 
-	jle smaller
+	jle smaller ; if it is, move it in edi for output
 
 	; if not, map it in A - Z
 	sub al, 90
@@ -37,11 +36,11 @@ string_loop:
 ; if it is / after mapping
 smaller:
 	; move the new letter in edi for output 
-	mov byte [edi], al
-	inc edi
-	inc esi
+	mov byte [edi], al ; move the letter in edi for output
+	inc edi ; move to the next letter in edi
+	inc esi ; move to the next letter in esi
 
-	loop string_loop
+	loop string_loop ; loop for the length of the string
 
     ;; Your code ends here
     

@@ -1,3 +1,4 @@
+; Copyrigth (c) 2023, <Dan-Dominic Staicu>
 
 section .data
 
@@ -17,55 +18,56 @@ checkers:
     ;; DO NOT MODIFY
     ;; FREESTYLE STARTS HERE
 
-	mov esi, ecx
+	mov esi, ecx ;save table
 	xor ecx, ecx
 
 ;address = base_address + (row_index * number_of_columns + column_index)
 
-upper_left:
+upper_left: ; corner in a direction where the piece can go
+	push eax ;save x
+	push ebx ;save y
+	push esi ;save table
+
+	inc eax ;x++
+	dec ebx ;y--
+
+	;check if x and y are in bounds
+	cmp eax, 0 ;x < 0
+	jl no_place_ul
+
+	cmp eax, 7 ;x > 7
+	jg no_place_ul
+
+	cmp ebx, 0 ;y < 0
+	jl no_place_ul
+
+	cmp ebx, 7 ;y > 7
+	jg no_place_ul
+
+	mov dx, 8 ;dx = 8 number of columns
+	mul dx ;eax = eax * dx
+
+	add ax, bx ;(row_index * number_of_columns + column_index)
+
+	add esi, eax ;address = base_address + (row_index * number_of_columns + column_index)
+
+	mov dword [esi], dword 1 ;set the value to 1
+
+no_place_ul: ;out of bounds or placed succesfully
+	pop esi ;restore table
+	pop ebx ;restore y
+	pop eax ;restore x
+
+
+upper_right: ; corner in a direction where the piece can go
 	push eax
 	push ebx
 	push esi
 
-	inc eax
-	dec ebx
+	inc eax ;x++
+	inc ebx ;y++
 
-	cmp eax, 0
-	jl no_place_ul
-
-	cmp eax, 7
-	jg no_place_ul
-
-	cmp ebx, 0
-	jl no_place_ul
-
-	cmp ebx, 7
-	jg no_place_ul
-
-	mov dx, 8
-	mul dx
-
-	add ax, bx
-
-	add esi, eax
-
-	mov dword [esi], dword 1
-
-	
-no_place_ul:
-	pop esi
-	pop ebx
-	pop eax
-
-
-upper_right:
-	push eax
-	push ebx
-	push esi
-
-	inc eax
-	inc ebx
-
+	;check if x and y are in bounds
 	cmp eax, 0
 	jl no_place_ur
 
@@ -87,20 +89,21 @@ upper_right:
 
 	mov dword [esi], dword 1
 
-no_place_ur:
+no_place_ur: ;out of bounds or placed succesfully
 	
 	pop esi
 	pop ebx
 	pop eax
 
-lower_left:
+lower_left: ; corner in a direction where the piece can go
 	push eax
 	push ebx
 	push esi
 
-	dec eax
-	dec ebx
+	dec eax ;x--
+	dec ebx ;y--
 
+	;check if x and y are in bounds
 	cmp eax, 0
 	jl no_place_ll
 
@@ -122,19 +125,19 @@ lower_left:
 
 	mov dword [esi], dword 1
 
-no_place_ll:
+no_place_ll: ;out of bounds or placed succesfully
 	pop esi
 	pop ebx
 	pop eax
 
 
-lower_right:
+lower_right: ; corner in a direction where the piece can go
 	push eax
 	push ebx
 	push esi
 
-	dec eax
-	inc ebx
+	dec eax ;x--
+	inc ebx ;y++
 
 	cmp eax, 0
 	jl no_place_lr
@@ -158,7 +161,7 @@ lower_right:
 	mov dword [esi], dword 1
 
 
-no_place_lr:
+no_place_lr: ;out of bounds or placed succesfully
 	pop esi
 	pop ebx
 	pop eax
